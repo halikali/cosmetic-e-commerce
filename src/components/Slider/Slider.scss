@@ -1,29 +1,29 @@
 .slide-wrap {
   width: 35%;
   height: 50%;
-  border: 1px solid black;
-  position: absolute;
   top: 15%;
   left: 10%;
   text-align: left;
   display: flex;
   flex-direction: column;
   .text-above {
-    font-size: 3vh;
-    letter-spacing: 1.6vh;
+    font-size: 1vw;
+    letter-spacing: 1.6vw;
   }
   .inner-title {
-    font-size: 10vh;
+    font-size: 5vw;
     line-height: 1;
-    letter-spacing: 2vh;
+    letter-spacing: 2vw;
   }
   .description {
-    font-size: 2vh;
+    font-size: 1.5vw;
     line-height: 1.6;
   }
   .read-more-btn {
-    font-size: 2vh;
+    font-size: 1vw;
     width: max-content;
     padding: 10px;
+    color: white;
+    background-color: black;
   }
 }
