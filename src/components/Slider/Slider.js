@@ -6,7 +6,7 @@ const Slider = () => {
   return (
     <div
       id="carouselExampleCaptions"
-      className="carousel slide"
+      className="carousel slide carousel-fade"
       data-bs-ride="carousel"
     >
       <div className="carousel-indicators">
