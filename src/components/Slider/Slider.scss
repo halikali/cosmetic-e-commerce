@@ -1,0 +1,21 @@
+.slide-wrap {
+  width: 35%;
+  height: 50%;
+  border: 1px solid black;
+  position: absolute;
+  top: 15%;
+  left: 10%;
+  text-align: left;
+  .text-above {
+    font-size: 3vh;
+    margin: 0;
+  }
+  .inner-title {
+    font-size: 10vh;
+    line-height: 1;
+    letter-spacing: 2vh;
+  }
+  .description {
+    font-size: 2vh;
+  }
+}
