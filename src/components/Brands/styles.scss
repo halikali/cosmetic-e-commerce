@@ -1,0 +1,20 @@
+.brands-section{
+    .row{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+    .img-thumbnail{
+        border: none;
+    }
+    img{
+        opacity: 0.5;
+    }
+    img:hover{
+        opacity: 1;
+        transition: all .5s ease-in-out;
+        transform: scale(1.2);
+    }
+    
+}

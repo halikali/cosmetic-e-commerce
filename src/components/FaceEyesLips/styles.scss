@@ -1,0 +1,22 @@
+.img-thumbnail{
+    border:none;
+    padding: 0px;
+    border-radius: 0px;
+}
+.img-thumbnail:hover{
+    filter: brightness(60%);
+    transition: all .5s ease-out;
+}
+
+
+.thumbnails-text{
+    position: absolute;
+    color: white;
+    z-index: 99;
+    font-weight: 400;
+    font-size: 36px;
+    margin-left: 30px;
+    letter-spacing: 10px;
+    text-transform: uppercase;
+    padding-top: 25%;
+}

@@ -1,0 +1,17 @@
+.blogs-col{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.blog-button{
+    width: 140px;
+    height: 50px;
+    border-radius: 0;
+    align-self: center;
+}
+.card-text{
+    white-space: pre-line;
+    margin-bottom: 250px;
+    padding:0 60px;
+}
