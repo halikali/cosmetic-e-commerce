@@ -10,7 +10,7 @@ import TwoBlogsPart from "./components/TwoBlogsPart/TwoBlogsPart";
 function App() {
   return (
     <div className="App">
-      <Subscribe />
+      <TwoBlogsPart />
     </div>
   );
 }
