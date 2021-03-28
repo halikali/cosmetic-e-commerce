@@ -1,9 +1,11 @@
-import React from "react";
-import Footer from "../components/Footer/Footer";
-import Navbar from "../components/navbar/Navbar";
+import Product from "../components/ShopPage/Product";
 
 const Shop = () => {
-  return <div></div>;
+  return (
+    <>
+      <Product />
+    </>
+  );
 };
 
 export default Shop;

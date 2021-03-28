@@ -1,10 +1,11 @@
-export const getPhoto = () => {
-    return (dispatch) => {
-      dispatch({ type: "GET_PHOTO_REQUEST" });
-      fetch("https://picsum.photos/id/10/info")
-        .then((response) => response.json())
-        .then((data) => dispatch({ type: "GET_PHOTO_SUCCESS", payload: data }))
-        .catch((error) => dispatch({ type: "GET_PHOTO_ERROR", payload: error }));
-    };
+export const getProducts = () => {
+  return (dispatch) => {
+    dispatch({ type: "GET_PRODUCTS_REQUEST" });
+    fetch("http://makeup-api.herokuapp.com/api/v1/products.json")
+      .then((response) => response.json())
+      .then((data) => dispatch({ type: "GET_PRODUCTS_SUCCESS", payload: data }))
+      .catch((error) =>
+        dispatch({ type: "GET_PRODUCTS_ERROR", payload: error })
+      );
+  };
 };
-  
