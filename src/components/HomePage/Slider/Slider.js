@@ -1,6 +1,6 @@
-import Slide1 from "../../assets/slide1.jpg";
-import Slide2 from "../../assets/slide2.jpg";
-import Slide3 from "../../assets/slide3.jpg";
+import Slide1 from "../../../assets/slide1.jpg";
+import Slide2 from "../../../assets/slide2.jpg";
+import Slide3 from "../../../assets/slide3.jpg";
 import "./Slider.scss";
 const Slider = () => {
   return (

@@ -1,7 +1,7 @@
 import React from "react";
-import Face from "../../assets/Face.png";
-import Lips from "../../assets/Lips.png";
-import Eyes from "../../assets/eyes.png";
+import Face from "../../../assets/Face.png";
+import Lips from "../../../assets/Lips.png";
+import Eyes from "../../../assets/eyes.png";
 import "./styles.scss";
 const FaceEyesLips = () => {
   return (

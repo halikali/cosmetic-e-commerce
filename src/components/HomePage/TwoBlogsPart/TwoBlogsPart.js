@@ -1,6 +1,6 @@
 import React from "react";
-import BlogOneBackground from "../../assets/Blogs1.png";
-import BlogTwoBackground from "../../assets/Blogs2.jpg";
+import BlogOneBackground from "../../../assets/Blogs1.png";
+import BlogTwoBackground from "../../../assets/Blogs2.jpg";
 
 import "./styles.scss";
 const TwoBlogsPart = () => {

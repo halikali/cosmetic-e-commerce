@@ -1,9 +1,9 @@
 import React from "react";
-import LorealLogo from "../../assets/lorealLogo.png";
-import MacLogo from "../../assets/macLogo.png";
-import SchwarzkopLogo from "../../assets/schwarzkopLogo.png";
-import FableManeLogo from "../../assets/FableManeLogo.png";
-import AerinLogo from "../../assets/AerinLogo.png";
+import LorealLogo from "../../../assets/lorealLogo.png";
+import MacLogo from "../../../assets/macLogo.png";
+import SchwarzkopLogo from "../../../assets/schwarzkopLogo.png";
+import FableManeLogo from "../../../assets/FableManeLogo.png";
+import AerinLogo from "../../../assets/AerinLogo.png";
 import "./styles.scss";
 const Brands = () => {
   return (

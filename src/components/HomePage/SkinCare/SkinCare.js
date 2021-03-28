@@ -1,7 +1,7 @@
 import React from "react";
 import "./style.scss";
-import skinCarePhotos from "../../assets/skinCarePhotos.png";
-import skinCarePhotos2 from "../../assets/skinCarePhotos2.png";
+import skinCarePhotos from "../../../assets/skinCarePhotos.png";
+import skinCarePhotos2 from "../../../assets/skinCarePhotos2.png";
 const SkinCare = () => {
   return (
     <section>

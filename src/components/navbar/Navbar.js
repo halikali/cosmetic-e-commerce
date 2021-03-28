@@ -4,6 +4,8 @@ import Bag from "../../assets/header/bag-check.svg";
 import Person from "../../assets/header/person.svg";
 import Search from "../../assets/header/search.svg";
 import Heart from "../../assets/header/suit-heart.svg";
+import { Link } from "react-router-dom";
+import Home from "../../Pages/Home";
 
 const Navbar = () => {
   let lastKnownScrollPosition = 0;
@@ -19,7 +21,7 @@ const Navbar = () => {
 
   return (
     <section>
-      <div className="header-nav" id="header">
+      <div className="header-nav " id="header">
         <div className="logo">
           <img
             width="205"
@@ -42,28 +44,28 @@ const Navbar = () => {
             <span class="navbar-toggler-icon"></span>
           </button>
 
-          <a href="/" className="nav-item nav-link active" id="home">
-            HOME
-          </a>
+          <Link className="nav-item nav-link active" id="home" to="/">
+            <span className="a">HOME</span>
+          </Link>
 
-          <a href="/" className="nav-item nav-link active" id="shop">
-            SHOP
-          </a>
-          <a href="/" className="nav-item nav-link active" id="headers">
-            HEADERS
-          </a>
-          <a href="/" className="nav-item nav-link active" id="blog">
-            BLOG
-          </a>
-          <a href="/" className="nav-item nav-link active " id="pages">
-            PAGES
-          </a>
-          <a href="/" className="nav-item nav-link active" id="mega">
-            MEGA
-          </a>
-          <a href="/" className="nav-item nav-link active" id="contact">
-            CONTACT
-          </a>
+          <Link className="nav-item nav-link active" id="shop" to="/shop">
+            <span className="a">SHOP</span>
+          </Link>
+          <Link className="nav-item nav-link active" id="headers" to="/headers">
+            <span className="a">HEADERS</span>
+          </Link>
+          <Link className="nav-item nav-link active" id="blog" to="/blog">
+            <span className="a">BLOG</span>
+          </Link>
+          <Link className="nav-item nav-link active" id="pages" to="/pages">
+            <span className="a">PAGES</span>
+          </Link>
+          <Link className="nav-item nav-link active" id="mega" to="/mega">
+            <span className="a">MEGA</span>
+          </Link>
+          <Link className="nav-item nav-link active" id="contact" to="/contact">
+            <span className="a">CONTACT</span>
+          </Link>
         </nav>
 
         <div className="personicon">

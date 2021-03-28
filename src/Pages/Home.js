@@ -1,21 +1,18 @@
 import React from "react";
-import Navbar from "../components/navbar/Navbar";
-import Slider from "../components/Slider/Slider";
-import Footer from "../components/Footer/Footer";
-import InstagramAndImages from "../components/InstagramAndImages/InstagramAndImages";
-import Brands from "../components/Brands/Brands";
-import FaceEyesLips from "../components/FaceEyesLips/FaceEyesLips";
-import NaturalQualityCashback from "../components/NaturalQualityCashback/NaturalQualityCashback";
-import News from "../components/News/News";
-import ShipSupportMoney from "../components/shipSupportMoney/ShipSupportMoney";
-import SkinCare from "../components/SkinCare/SkinCare";
-import Subscribe from "../components/Subscribe/Subscribe";
-import TwoBlogsPart from "../components/TwoBlogsPart/TwoBlogsPart";
+import Slider from "../components/HomePage/Slider/Slider";
+import InstagramAndImages from "../components/HomePage/InstagramAndImages/InstagramAndImages";
+import Brands from "../components/HomePage/Brands/Brands";
+import FaceEyesLips from "../components/HomePage/FaceEyesLips/FaceEyesLips";
+import NaturalQualityCashback from "../components/HomePage/NaturalQualityCashback/NaturalQualityCashback";
+import News from "../components/HomePage/News/News";
+import ShipSupportMoney from "../components/HomePage/shipSupportMoney/ShipSupportMoney";
+import SkinCare from "../components/HomePage/SkinCare/SkinCare";
+import Subscribe from "../components/HomePage/Subscribe/Subscribe";
+import TwoBlogsPart from "../components/HomePage/TwoBlogsPart/TwoBlogsPart";
 
 const Home = () => {
   return (
     <>
-      <Navbar />
       <Slider />
       <ShipSupportMoney />
       <SkinCare />
@@ -26,7 +23,6 @@ const Home = () => {
       <News />
       <Brands />
       <InstagramAndImages />
-      <Footer />
     </>
   );
 };

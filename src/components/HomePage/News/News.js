@@ -1,7 +1,7 @@
 import React from "react";
 import "./styles.scss";
-import Face from "../../assets/Face.png";
-import Eyes from "../../assets/eyes.png";
+import Face from "../../../assets/Face.png";
+import Eyes from "../../../assets/eyes.png";
 const News = () => {
   return (
     <section className="news-container margin-all">

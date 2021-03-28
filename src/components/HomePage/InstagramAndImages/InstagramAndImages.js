@@ -1,9 +1,9 @@
-import firstImage from "../../assets/instagramAndImages/firstimage.jpg";
-import secondImage from "../../assets/instagramAndImages/secondimage.jpg";
-import thirdImage from "../../assets/instagramAndImages/thirdimage.jpg";
-import forthImage from "../../assets/instagramAndImages/forthimage.jpg";
-import fifthImage from "../../assets/instagramAndImages/fifthimage.jpg";
-import sixthImage from "../../assets/instagramAndImages/sixthimage.jpg";
+import firstImage from "../../../assets/instagramAndImages/firstimage.jpg";
+import secondImage from "../../../assets/instagramAndImages/secondimage.jpg";
+import thirdImage from "../../../assets/instagramAndImages/thirdimage.jpg";
+import forthImage from "../../../assets/instagramAndImages/forthimage.jpg";
+import fifthImage from "../../../assets/instagramAndImages/fifthimage.jpg";
+import sixthImage from "../../../assets/instagramAndImages/sixthimage.jpg";
 
 import "./InstagramAndImages.scss";
 

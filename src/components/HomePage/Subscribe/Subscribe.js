@@ -1,6 +1,6 @@
 import React from "react";
 import "./styles.scss";
-import SubscribeLogo from "../../assets/subscribe.jpg";
+import SubscribeLogo from "../../../assets/subscribe.jpg";
 const Subscribe = () => {
   return (
     <section className="subscribe-section margin-all">
