@@ -1,0 +1,121 @@
+.container-fluid{
+    .row{
+        .col-lg-6{
+            .card{
+                .row{
+                    .col-md-6{
+                        background-color: #DBE4EE;
+                        .card-body{
+                            display: flex;
+                            flex-direction: column;
+                            margin-top: 20%;
+                            .card-title{
+                                letter-spacing: 10px;
+                                word-spacing: 15px;
+                                text-transform: uppercase;
+                                font-size: 1.8rem;
+                                font-weight: 100;
+                                span{
+                                    display: block;
+                                    font-weight: 400;
+                                    font-size: 3.5rem;
+                                }
+                            }
+                            .card-text{
+                                // margin-top: 80px;
+                            }
+                            button{
+                                width: 130px;
+                                height: 50px;
+                            }
+                        }
+                    }
+                }
+            }
+            position: relative;
+            overflow: hidden;
+            img{
+                display: block;
+                width: 100%;
+               
+            }
+        }
+    }
+}
+
+.padding-0{
+    padding-right:0;
+    padding-left:0;
+}
+
+@media only screen and (max-width: 1600px) {
+    .container-fluid{
+        .row{
+            .col-lg-6{
+                .card{
+                    .row{
+                        .col-md-6{
+                            .card-body{
+                                .card-title{
+                                    word-spacing: 5px;
+                                    font-size: 1rem;
+                                    font-weight: 100;
+                                    span{
+                                        display: block;
+                                        font-weight: 400;
+                                        font-size: 2.5rem;
+                                    }
+                                }
+                                .card-text{
+                                }
+                                button{
+
+                                }
+                            }
+                        }
+                    }
+                }
+                img{
+                }
+            }
+        }
+    }
+    
+    
+  }
+
+
+  
+@media only screen and (max-width: 1250px) {
+    .container-fluid{
+        .row{
+            .col-lg-6{
+                .card{
+                    .row{
+                        .col-md-6{
+                            .card-body{
+                                .card-title{
+                                    span{
+                                        display: block;
+                                        font-weight: 400;
+                                        font-size: 1.7rem;
+                                    }
+                                }
+                                .card-text{
+                                }
+                                button{
+                                }
+                            }
+                        }
+                    }
+                }
+
+                img{
+
+                }
+            }
+        }
+    }
+    
+    
+  }

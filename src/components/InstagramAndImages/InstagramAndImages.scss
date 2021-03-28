@@ -1,0 +1,23 @@
+.margin-t-b {
+  margin-top: 20vh;
+  margin-bottom: 20vh;
+  .item-2 {
+    transform: translateY(26%);
+  }
+
+  .item-3 {
+    transform: translateY(-26%);
+  }
+
+  .item-4 {
+    transform: translateY(+35%);
+  }
+
+  .item-5 {
+    transform: translateY(-10%);
+  }
+
+  .item-6 {
+    transform: translateY(+15%);
+  }
+}

@@ -1,0 +1,36 @@
+
+.two-blogs-part-section{
+    .container{
+        .row{
+            .col-md-6.blogs-col{ 
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                .card{
+                    .blog-button{
+                        width: 140px;
+                        height: 50px;
+                        border-radius: 0;
+                        align-self: center;
+                    }
+                    .card-body{
+                        .card-text{
+                            white-space: pre-line;
+                            margin-bottom: 250px;
+                            padding:0 60px;
+                        }
+                        
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+.card{
+    border: none;
+}
+.img-thumbnail{
+    border: none;
+}
