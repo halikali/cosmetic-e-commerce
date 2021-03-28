@@ -1,4 +1,6 @@
 import "./App.css";
+import Footer from "./components/Footer/Footer";
+import InstagramAndImages from "./components/InstagramAndImages/InstagramAndImages";
 import Brands from "./components/Brands/Brands";
 import FaceEyesLips from "./components/FaceEyesLips/FaceEyesLips";
 import NaturalQualityCashback from "./components/NaturalQualityCashback/NaturalQualityCashback";
@@ -12,6 +14,8 @@ function App() {
   return (
     <div className="App">
       <News />
+      <InstagramAndImages />
+      <Footer />
     </div>
   );
 }

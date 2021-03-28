@@ -1,0 +1,61 @@
+footer {
+  background-image: url("../../assets/footer/footer_image.png");
+}
+
+.text-decoration {
+  text-decoration: none;
+  color: white;
+}
+
+.text-decoration:hover {
+  color: rgb(136, 128, 108);
+}
+
+.text-company {
+  margin-top: 10%;
+  color: white;
+  letter-spacing: 1vh;
+  font-weight: 350;
+  text-decoration: none;
+}
+
+.text-company:hover {
+  color: rgb(250, 228, 228);
+}
+
+.footer-text {
+  color: rgb(160, 154, 139);
+  max-width: 300px;
+}
+
+.footer-read-more {
+  text-align: right;
+  color: white;
+  font-size: 0.8rem;
+  letter-spacing: 0.1px;
+  font-weight: 500;
+}
+
+.footer-company-margin {
+  margin-top: 3rem;
+}
+
+.footer-margin-right {
+  margin-right: 2rem;
+}
+
+.footer-text-theme {
+  color: rgb(136, 128, 108);
+}
+
+.text-left {
+  text-align: left;
+}
+
+.margin-0 {
+  margin: 0;
+}
+
+.text-right {
+  text-align: right;
+}
