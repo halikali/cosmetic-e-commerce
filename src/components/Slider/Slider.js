@@ -42,7 +42,7 @@ const Slider = () => {
               insipidity age you simplicity understood. Do offering pleasure no
               ecstatic whatever on mr directly.
             </p>
-            <p className="read-more-btn">READ MORE</p>
+            <p className="read-more-btn">EXPLORE BRAND</p>
           </div>
         </div>
         <div className="carousel-item">
@@ -68,7 +68,7 @@ const Slider = () => {
               insipidity age you simplicity understood. Do offering pleasure no
               ecstatic whatever on mr directly.
             </p>
-            <p className="read-more-btn">READ MORE</p>
+            <p className="read-more-btn">EXPLORE SHOP</p>
           </div>
         </div>
       </div>
