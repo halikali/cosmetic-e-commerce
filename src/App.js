@@ -5,8 +5,15 @@ import "./App.scss";
 import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
 import Shop from "./Pages/Shop";
+import { useEffect } from "react";
+import { useDispatch } from "react-redux";
+import { getProducts } from "./store/actions/actions";
 
 function App() {
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(getProducts());
+  }, []);
   return (
     <div className="App">
       <Router>
