@@ -1,0 +1,124 @@
+.logo {
+  position: fixed;
+  left: 45px;
+  top: 41px;
+}
+
+.searchicon {
+  position: fixed;
+
+  top: 40px;
+  right: 250px;
+}
+.searchicon:hover {
+  z-index: 4;
+  -webkit-transform: scale(2);
+  -ms-transform: scale(2);
+  -moz-transform: scale(2);
+  transform: scale(1.2);
+}
+
+.personicon {
+  position: fixed;
+
+  top: 40px;
+  right: 190px;
+}
+
+.personicon:hover {
+  z-index: 4;
+  -webkit-transform: scale(2);
+  -ms-transform: scale(2);
+  -moz-transform: scale(2);
+  transform: scale(1.2);
+}
+
+.hearticon {
+  position: fixed;
+
+  top: 40px;
+  right: 130px;
+}
+.hearticon:hover {
+  z-index: 4;
+  -webkit-transform: scale(2);
+  -ms-transform: scale(2);
+  -moz-transform: scale(2);
+  transform: scale(1.2);
+}
+
+.bagicon {
+  position: fixed;
+
+  top: 40px;
+  right: 70px;
+}
+.bagicon:hover {
+  z-index: 4;
+  -webkit-transform: scale(2);
+  -ms-transform: scale(2);
+  -moz-transform: scale(2);
+  transform: scale(1.2);
+}
+
+#nav {
+  position: fixed;
+
+  top: 40px;
+  left: 340px;
+}
+#home {
+  font-weight: bold;
+  font-size: 11pt;
+  font-family: "Lucida Console", Monaco, monospace;
+  letter-spacing: 3px;
+  color: floralwhite;
+}
+
+#shop {
+  font-weight: bold;
+  font-size: 11pt;
+  font-family: "Lucida Console", Monaco, monospace;
+  letter-spacing: 2px;
+  color: floralwhite;
+}
+
+#headers {
+  font-weight: bold;
+  font-size: 11pt;
+  font-family: "Lucida Console", Monaco, monospace;
+  letter-spacing: 2px;
+  color: floralwhite;
+}
+
+#blog {
+  font-weight: bold;
+  font-size: 11pt;
+  font-family: "Lucida Console", Monaco, monospace;
+  letter-spacing: 2px;
+  color: floralwhite;
+}
+
+#pages {
+  font-weight: bold;
+  font-size: 11pt;
+  font-family: "Lucida Console", Monaco, monospace;
+  letter-spacing: 2px;
+  color: floralwhite;
+}
+
+#mega {
+  font-weight: bold;
+  font-size: 11pt;
+  font-family: "Lucida Console", Monaco, monospace;
+  letter-spacing: 2px;
+  color: floralwhite;
+}
+
+#contact {
+  font-weight: bold;
+  font-size: 11pt;
+  font-family: "Lucida Console", Monaco, monospace;
+  letter-spacing: 2px;
+  color: floralwhite;
+}
