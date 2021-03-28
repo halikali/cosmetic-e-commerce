@@ -3,7 +3,7 @@ import "./styles.scss";
 
 const NaturalQualityCashback = () => {
   return (
-    <section className="natural-quality-cashback-section">
+    <section className="natural-quality-cashback-section margin-all">
       <div className="container">
         <div className="row">
           <div className="col-lg-4 padding">

@@ -5,7 +5,7 @@ import BlogTwoBackground from "../../assets/Blogs2.jpg";
 import "./styles.scss";
 const TwoBlogsPart = () => {
   return (
-    <section className="two-blogs-part-section">
+    <section className="two-blogs-part-section margin-all">
       <div className="container">
         <div className="row">
           <div className="col-md-6 ">

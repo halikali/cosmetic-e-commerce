@@ -18,8 +18,8 @@ const Navbar = () => {
   });
 
   return (
-    <section className="header-nav" id="header">
-      <div>
+    <section>
+      <div className="header-nav" id="header">
         <div className="logo">
           <img
             width="205"
@@ -29,10 +29,23 @@ const Navbar = () => {
           />
         </div>
 
-        <nav className="nav justify-content-center" id="nav">
+        <nav className="nav justify-content-center " id="nav">
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarTogglerDemo03"
+            aria-controls="navbarTogglerDemo03"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
           <a href="/" className="nav-item nav-link active" id="home">
             HOME
           </a>
+
           <a href="/" className="nav-item nav-link active" id="shop">
             SHOP
           </a>

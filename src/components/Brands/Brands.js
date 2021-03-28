@@ -7,7 +7,7 @@ import AerinLogo from "../../assets/AerinLogo.png";
 import "./styles.scss";
 const Brands = () => {
   return (
-    <section className="brands-section">
+    <section className="brands-section margin-all">
       <div className="container">
         <div className="row">
           <div className="col-md-2 col-sm-4 col-4">

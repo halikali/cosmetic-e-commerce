@@ -3,7 +3,7 @@ import "./style.scss";
 
 const ShipSupportMoney = () => {
   return (
-    <section className="ship-support-money-container">
+    <section className="ship-support-money-container margin-all">
       <div className="container">
         <div className="row">
           <div className="col-lg-4 padding">

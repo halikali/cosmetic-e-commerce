@@ -4,7 +4,7 @@ import Face from "../../assets/Face.png";
 import Eyes from "../../assets/eyes.png";
 const News = () => {
   return (
-    <section className="news-container">
+    <section className="news-container margin-all">
       <div className="container">
         <div className="row">
           <div className="col-12">

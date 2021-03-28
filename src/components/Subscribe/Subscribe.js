@@ -3,7 +3,7 @@ import "./styles.scss";
 import SubscribeLogo from "../../assets/subscribe.jpg";
 const Subscribe = () => {
   return (
-    <section className="subscribe-section">
+    <section className="subscribe-section margin-all">
       <div className="container">
         <div className="row">
           <div className="col-md-6">

@@ -17,8 +17,8 @@ const Home = () => {
     <>
       <Navbar />
       <Slider />
-      <SkinCare />
       <ShipSupportMoney />
+      <SkinCare />
       <TwoBlogsPart />
       <NaturalQualityCashback />
       <FaceEyesLips />

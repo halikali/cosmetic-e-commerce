@@ -10,7 +10,7 @@ import "./InstagramAndImages.scss";
 export default function InstagramAndImages() {
   return (
     <>
-      <section className="instagram-wrapper d-md-flex justify-content-center margin-t-b d-none">
+      <section className="instagram-wrapper d-md-flex justify-content-center margin-t-b d-none ">
         <div className="item-1">
           <img src={firstImage} alt="mı o" />
         </div>

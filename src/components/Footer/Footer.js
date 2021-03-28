@@ -43,7 +43,7 @@ export default function Footer() {
             <div className="row">
               <div className="col-md-4 col-lg-3 col-xl-2 mx-auto mt-4 text-white text-left">
                 <p>
-                  <i className="fas fa-phone-alt mr-3"></i> +90 123 456 78 90
+                  <i className="fas fa-phone-alt mr-3 "></i> +90 123 456 78 90
                 </p>
                 <p>
                   <i className="fas fa-home mr-3"></i>{" "}
@@ -57,10 +57,10 @@ export default function Footer() {
                   </a>
                 </p>
                 <p>
-                  <i className="fas fa-envelope mr-3"></i>
+                  <i className="fas fa-envelope "></i>
                   <a
                     rel="noreferrer"
-                    className="text-decoration "
+                    className="text-decoration px-2 "
                     href="mailto:info@gmail.com"
                     target="_blank"
                   >
@@ -79,28 +79,28 @@ export default function Footer() {
                   </a>
                 </h4>
                 <a
-                  className="btn btn-primary btn-floating m-1"
+                  className="btn btn-outline-light btn-floating m-1"
                   href="#!"
                   role="button"
                 >
                   <i className="fab fa-facebook-f"></i>
                 </a>
                 <a
-                  className="btn btn-primary btn-floating m-1"
+                  className="btn btn-outline-light btn-floating m-1"
                   href="#!"
                   role="button"
                 >
                   <i className="fab fa-twitter"></i>
                 </a>
                 <a
-                  className="btn btn-primary btn-floating m-1"
+                  className="btn btn-outline-light btn-floating m-1"
                   href="#!"
                   role="button"
                 >
                   <i className="fab fa-instagram"></i>
                 </a>
                 <a
-                  className="btn btn-primary btn-floating m-1"
+                  className="btn btn-outline-light btn-floating m-1"
                   href="#!"
                   role="button"
                 >
@@ -128,9 +128,9 @@ export default function Footer() {
             <div className="row d-flex align-items-center">
               <div className="col-4 col-lg-6 col-xl-6 text-center">
                 <div className="p-3">
-                  <a href="/" className="text-decoration footer-text-theme">
+                  <p className="text-decoration footer-text-theme">
                     © 2021 Company Theme. All rights reserved.
-                  </a>
+                  </p>
                 </div>
               </div>
               <div className="col-8 col-lg-6 ml-lg-0 text-center">

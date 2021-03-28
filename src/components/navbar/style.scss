@@ -5,13 +5,18 @@
   z-index: 99;
   height: 100px;
   width: 100%;
+  font-size: 1.1rem;
   a{
     color: floralwhite;
   }
+
 }
 .navbar-after-scroll{
   background-color: white;
   transition: all .5s ease-in-out;
+  -webkit-box-shadow: 0px 6px 11px 0px rgba(50, 50, 50, 0.37);
+  -moz-box-shadow: 0px 6px 11px 0px rgba(50, 50, 50, 0.37);
+  box-shadow: 0px 6px 11px 0px rgba(50, 50, 50, 0.37);
   a{
     color: black;
   }
@@ -66,7 +71,6 @@
 
 .bagicon {
   position: fixed;
-
   top: 40px;
   right: 70px;
 }
@@ -79,13 +83,12 @@
 }
 
 #nav {
-  position: fixed;
+  position: relative;
   top: 40px;
-  left: 340px;
+  margin: auto auto;
 }
 #home {
   font-weight: bold;
-  font-size: 11pt;
   font-family: "Lucida Console", Monaco, monospace;
   letter-spacing: 3px;
   
@@ -93,7 +96,6 @@
 
 #shop {
   font-weight: bold;
-  font-size: 11pt;
   font-family: "Lucida Console", Monaco, monospace;
   letter-spacing: 2px;
  
@@ -101,7 +103,6 @@
 
 #headers {
   font-weight: bold;
-  font-size: 11pt;
   font-family: "Lucida Console", Monaco, monospace;
   letter-spacing: 2px;
 
@@ -109,7 +110,6 @@
 
 #blog {
   font-weight: bold;
-  font-size: 11pt;
   font-family: "Lucida Console", Monaco, monospace;
   letter-spacing: 2px;
 
@@ -117,7 +117,7 @@
 
 #pages {
   font-weight: bold;
-  font-size: 11pt;
+
   font-family: "Lucida Console", Monaco, monospace;
   letter-spacing: 2px;
 
@@ -125,7 +125,6 @@
 
 #mega {
   font-weight: bold;
-  font-size: 11pt;
   font-family: "Lucida Console", Monaco, monospace;
   letter-spacing: 2px;
 
@@ -133,7 +132,6 @@
 
 #contact {
   font-weight: bold;
-  font-size: 11pt;
   font-family: "Lucida Console", Monaco, monospace;
   letter-spacing: 2px;
 

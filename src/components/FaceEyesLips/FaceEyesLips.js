@@ -5,7 +5,7 @@ import Eyes from "../../assets/eyes.png";
 import "./styles.scss";
 const FaceEyesLips = () => {
   return (
-    <section className="face-eyes-lips-section">
+    <section className="face-eyes-lips-section margin-all">
       <div class="container-fluid">
         <div className="row">
           <div className="col-md-4 col-12 padding-0 mt-5 position-relative ">
