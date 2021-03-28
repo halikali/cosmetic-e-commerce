@@ -1,0 +1,63 @@
+.carousel-fade .carousel-item {
+  opacity: 0;
+  transition-duration: 0.6s;
+  transition-property: opacity;
+}
+
+.carousel-fade .carousel-item.active,
+.carousel-fade .carousel-item-next.carousel-item-left,
+.carousel-fade .carousel-item-prev.carousel-item-right {
+  opacity: 1;
+}
+
+.carousel-fade .active.carousel-item-left,
+.carousel-fade .active.carousel-item-right {
+  opacity: 0;
+}
+
+.carousel-fade .carousel-item-next,
+.carousel-fade .carousel-item-prev,
+.carousel-fade .carousel-item.active,
+.carousel-fade .active.carousel-item-left,
+.carousel-fade .active.carousel-item-prev {
+  transform: translateX(0);
+  transform: translate3d(0, 0, 0);
+}
+.slide-wrap {
+  width: 35%;
+  height: 50%;
+  top: 25%;
+  left: 10%;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  .text-above {
+    font-size: 1vw;
+    letter-spacing: 1.3vw;
+    padding-left: 5px;
+    margin-bottom: 5%;
+  }
+  .inner-title {
+    font-weight: 300;
+    font-size: 4vw;
+    line-height: 1;
+    letter-spacing: 1.5vw;
+    margin-bottom: 8%;
+  }
+  .description {
+    font-weight: 200;
+    font-size: 1vw;
+    line-height: 1.6;
+    margin-bottom: 8%;
+  }
+  .read-more-btn {
+    font-size: 0.7vw;
+    font-weight: 300;
+    letter-spacing: 0.1vw;
+    text-align: center;
+    width: 8vw;
+    line-height: 3.5;
+    color: white;
+    background-color: black;
+  }
+}

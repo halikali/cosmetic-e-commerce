@@ -1,0 +1,24 @@
+.ship-support-money-container{
+   .container{
+       .row{
+           .col-lg-4.padding{
+            padding-left: 50px;
+            padding-right: 50px;
+            .card{
+                border: none;
+                .card-body {
+                    .card-text{
+                        color: gray;
+                    }
+                    
+                }
+                .icon{
+                    font-size: 32px;
+                }
+                
+            }
+           }
+       }
+   } 
+}
+
