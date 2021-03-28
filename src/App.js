@@ -1,4 +1,4 @@
-import "./App.css";
+import Slider from "./components/Slider/Slider";
 import Footer from "./components/Footer/Footer";
 import InstagramAndImages from "./components/InstagramAndImages/InstagramAndImages";
 import Brands from "./components/Brands/Brands";
@@ -9,10 +9,13 @@ import ShipSupportMoney from "./components/shipSupportMoney/ShipSupportMoney";
 import SkinCare from "./components/SkinCare/SkinCare";
 import Subscribe from "./components/Subscribe/Subscribe";
 import TwoBlogsPart from "./components/TwoBlogsPart/TwoBlogsPart";
+import "./App.css";
+
 
 function App() {
   return (
     <div className="App">
+      <Slider />
       <SkinCare />
       <ShipSupportMoney />
       <TwoBlogsPart />
@@ -23,6 +26,7 @@ function App() {
       <Brands />
       <InstagramAndImages />
       <Footer />
+
     </div>
   );
 }
