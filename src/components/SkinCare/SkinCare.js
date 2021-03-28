@@ -30,7 +30,7 @@ const SkinCare = () => {
                   </div>
                 </div>
                 <div class="col-md-6">
-                  <img src={skinCarePhotos} alt="skin care photo" />
+                  <img src={skinCarePhotos} alt="skin care photoo" />
                 </div>
               </div>
             </div>
@@ -58,7 +58,7 @@ const SkinCare = () => {
                   </div>
                 </div>
                 <div class="col-md-6">
-                  <img src={skinCarePhotos2} alt="skin care photo" />
+                  <img src={skinCarePhotos2} alt="skin care photoo" />
                 </div>
               </div>
             </div>

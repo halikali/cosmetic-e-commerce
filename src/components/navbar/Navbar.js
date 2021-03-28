@@ -20,7 +20,7 @@ const Navbar = () => {
   return (
     <section className="header-nav" id="header">
       <div>
-        <div class="logo">
+        <div className="logo">
           <img
             width="205"
             height="18"
@@ -29,50 +29,50 @@ const Navbar = () => {
           />
         </div>
 
-        <nav class="nav justify-content-center" id="nav">
-          <a href="#" class="nav-item nav-link active" id="home">
+        <nav className="nav justify-content-center" id="nav">
+          <a href="/" className="nav-item nav-link active" id="home">
             HOME
           </a>
-          <a href="#" class="nav-item nav-link active" id="shop">
+          <a href="/" className="nav-item nav-link active" id="shop">
             SHOP
           </a>
-          <a href="#" class="nav-item nav-link active" id="headers">
+          <a href="/" className="nav-item nav-link active" id="headers">
             HEADERS
           </a>
-          <a href="#" class="nav-item nav-link active" id="blog">
+          <a href="/" className="nav-item nav-link active" id="blog">
             BLOG
           </a>
-          <a href="#" class="nav-item nav-link active " id="pages">
+          <a href="/" className="nav-item nav-link active " id="pages">
             PAGES
           </a>
-          <a href="#" class="nav-item nav-link active" id="mega">
+          <a href="/" className="nav-item nav-link active" id="mega">
             MEGA
           </a>
-          <a href="#" class="nav-item nav-link active" id="contact">
+          <a href="/" className="nav-item nav-link active" id="contact">
             CONTACT
           </a>
         </nav>
 
-        <div class="personicon">
-          <a href="#">
+        <div className="personicon">
+          <a href="/">
             <img width="28" height="22" src={Person} alt="person" />
           </a>
         </div>
 
-        <div class="searchicon">
-          <a href="#">
+        <div className="searchicon">
+          <a href="/">
             <img width="28" height="22" src={Search} alt="search" />
           </a>
         </div>
 
-        <div class="hearticon">
-          <a href="#">
+        <div className="hearticon">
+          <a href="/">
             <img width="28" height="22" src={Heart} alt="hearth" />
           </a>
         </div>
 
-        <div class="bagicon">
-          <a href="#">
+        <div className="bagicon">
+          <a href="/">
             {" "}
             <img width="28" height="22" src={Bag} alt="bag" />
           </a>

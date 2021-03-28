@@ -9,7 +9,7 @@ const Subscribe = () => {
           <div className="col-md-6">
             <div className="row ">
               <div className="col-6 ">
-                <i class="fas fa-envelope letter-icon"></i>
+                <i className="fas fa-envelope letter-icon"></i>
               </div>
               <div className="col-6">
                 <p>
@@ -46,7 +46,7 @@ const Subscribe = () => {
             <img
               src={SubscribeLogo}
               class="img-fluid "
-              alt="Responsive image"
+              alt="Subscribe imagee"
             />
           </div>
         </div>

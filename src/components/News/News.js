@@ -16,9 +16,9 @@ const News = () => {
         <div className="row mt-4">
           <div className="col-lg-6 col-12">
             <div className="card">
-              <img className="card-img-top" src={Face} />
+              <img className="card-img-top" src={Face} alt="Face" />
               <div className="card-body">
-                <h5 class="card-title">NEW TRENDS IN 2020 </h5>
+                <h5 className="card-title">NEW TRENDS IN 2020 </h5>
                 <p className="card-text mt-4">
                   For country now sister engage had seaseon better had
                   waited.Occasional mrs interested far expression.
@@ -26,7 +26,7 @@ const News = () => {
                 <h6 class="card-subtitle mb-2 text-muted mt-3">
                   Cosmetic - Fashion
                 </h6>
-                <a href="#" class="btn  btn-outline-dark mt-5">
+                <a href="/" class="btn  btn-outline-dark mt-5">
                   READ MORE
                 </a>
               </div>
@@ -34,17 +34,17 @@ const News = () => {
           </div>
           <div className="col-lg-6 col-12">
             <div className="card">
-              <img className="card-img-top" src={Eyes} />
+              <img className="card-img-top" src={Eyes} alt="Eyes" />
               <div className="card-body">
-                <h5 class="card-title">GALLERY POST </h5>
+                <h5 className="card-title">GALLERY POST </h5>
                 <p className="card-text mt-4">
                   For country now sister engage had seaseon better had
                   waited.Occasional mrs interested far expression.
                 </p>
-                <h6 class="card-subtitle mb-2 text-muted mt-3">
+                <h6 className="card-subtitle mb-2 text-muted mt-3">
                   Cosmetic - Fashion
                 </h6>
-                <a href="#" class="btn  btn-outline-dark mt-5">
+                <a href="/" class="btn  btn-outline-dark mt-5">
                   READ MORE
                 </a>
               </div>
