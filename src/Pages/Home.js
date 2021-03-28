@@ -1,4 +1,5 @@
 import React from "react";
+import Navbar from "../components/navbar/Navbar";
 import Slider from "../components/Slider/Slider";
 import Footer from "../components/Footer/Footer";
 import InstagramAndImages from "../components/InstagramAndImages/InstagramAndImages";
@@ -14,6 +15,7 @@ import TwoBlogsPart from "../components/TwoBlogsPart/TwoBlogsPart";
 const Home = () => {
   return (
     <>
+      <Navbar />
       <Slider />
       <SkinCare />
       <ShipSupportMoney />
