@@ -1,0 +1,22 @@
+    .news-container{
+        .container{
+            width: 50%;
+            .row{
+                .col-lg-6{
+                    .card{
+                        .card-body{
+                            .card-title{
+                                letter-spacing: 6px;
+                            }
+                            .btn{
+                                width: 150px;
+                                height: 50px;
+                                border-radius: 0;
+                                line-height: 35px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
