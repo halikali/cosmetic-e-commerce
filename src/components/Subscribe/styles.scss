@@ -1,0 +1,20 @@
+.subscribe-section{
+    .container{
+        width: 50%;
+        .row{
+            .col-md-6{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                .row{
+                    .col-6{
+                        .letter-icon{
+                            font-size: 82px;
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+}
