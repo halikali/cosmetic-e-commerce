@@ -1,12 +1,7 @@
-import React, { useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { getProducts } from "../../store/actions/actions";
-const Product = () => {
-  const dispatch = useDispatch();
-  useEffect(() => {
-    dispatch(getProducts());
-  }, []);
+import React from "react";
+import { useSelector } from "react-redux";
 
+const Product = () => {
   const products = useSelector((state) => state.productsReducer.data);
 
   return (
