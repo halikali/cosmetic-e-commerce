@@ -13,7 +13,14 @@ import TwoBlogsPart from "./components/TwoBlogsPart/TwoBlogsPart";
 function App() {
   return (
     <div className="App">
+      <SkinCare />
+      <ShipSupportMoney />
+      <TwoBlogsPart />
+      <NaturalQualityCashback />
+      <FaceEyesLips />
+      <Subscribe />
       <News />
+      <Brands />
       <InstagramAndImages />
       <Footer />
     </div>
