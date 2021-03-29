@@ -8,10 +8,10 @@ const Shop = () => {
       <div style={{ backgroundColor: "red", height: "500px" }}></div>
       <div className="container">
         <div className="row">
-          <div className="col-md-3">
+          <div className="col-md-2">
             <Filter />
           </div>
-          <div className="col-md-9">
+          <div className="col-md-10">
             <Product />
           </div>
         </div>
