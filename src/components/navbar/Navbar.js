@@ -5,7 +5,6 @@ import Person from "../../assets/header/person.svg";
 import Search from "../../assets/header/search.svg";
 import Heart from "../../assets/header/suit-heart.svg";
 import { Link } from "react-router-dom";
-import Home from "../../Pages/Home";
 
 const Navbar = () => {
   let lastKnownScrollPosition = 0;
