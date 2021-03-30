@@ -13,8 +13,9 @@ import Details from "./components/ShopPage/Details/Details";
 function App() {
   const dispatch = useDispatch();
   useEffect(() => {
-    dispatch(getProducts());
+    dispatch(getProducts("", ""));
   }, []);
+
   return (
     <div className="App">
       <Router>

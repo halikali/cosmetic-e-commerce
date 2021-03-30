@@ -1,5 +1,5 @@
 import Filter from "../components/ShopPage/Filter/Filter";
-import Product from "../components/ShopPage/Product";
+import Product from "../components/ShopPage/Product/Product";
 
 const Shop = () => {
   return (

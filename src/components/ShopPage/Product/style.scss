@@ -1,0 +1,30 @@
+.product-section {
+  margin-top: 35px;
+  .card {
+    img {
+      height: 40%;
+      object-fit: contain;
+    }
+    .card-body {
+      .card-title {
+        width: auto;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        margin: auto;
+        font-size: 1.2 rem;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        &:hover {
+          color: #e4cdd9;
+          cursor: pointer;
+          transition: all 0.3s ease;
+        }
+      }
+      .card-text {
+        display: block;
+        height: 10px;
+      }
+    }
+  }
+}
