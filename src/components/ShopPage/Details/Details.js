@@ -12,10 +12,13 @@ const Details = () => {
     return { __html: detail.name };
   }
   const hoverHandler = (event) => {
-    console.log(event.target.firstChild);
-    /* !event.target.firstChild.classList.contains("hover-p") &&
-      event.target.firstChild.classList.add("hover-p");
-    console.log(event.target.firstChild.classList); */
+    // event.target.firstChild.classList.add("hover-p");
+    // event.target.children[0].classList.add("hover-p");
+    // console.log(event);
+    // console.log(event.target.childNodes[0].classList);
+  };
+  const downHandler = (event) => {
+    // event.target.firstChild.classList.remove("hover-p");
   };
   return (
     <>
@@ -117,17 +120,14 @@ const Details = () => {
                 {detail.product_colors &&
                   detail.product_colors.map((color) => (
                     <div
+                      className="color-palette"
                       onMouseOver={hoverHandler}
+                      onMouseLeave={downHandler}
                       style={{
                         backgroundColor: `${color.hex_value}`,
-                        height: "50px",
-                        width: "50px",
-                        borderRadius: "50%",
-                        float: "left",
-                        marginLeft: "15px",
                       }}
                     >
-                      <p id="color-name">{color.colour_name}</p>
+                      <p className="color-name">{color.colour_name}</p>
                     </div>
                   ))}
               </div>
