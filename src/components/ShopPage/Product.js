@@ -11,7 +11,7 @@ const Product = () => {
           <div className="card col-md-4 position-relative">
             <img
               className="card-img-top"
-              src={product.image_link}
+              src={product.api_featured_image}
               alt={product.name}
             />
             <div className="card-body">
