@@ -1,0 +1,16 @@
+.text-capitalize {
+  text-transform: capitalize;
+}
+#color-name {
+  display: block;
+  width: max-content;
+  line-height: 3;
+  position: relative;
+  top: -50px;
+  opacity: 0;
+
+  background-color: gray;
+}
+.hover-p {
+  opacity: 1;
+}

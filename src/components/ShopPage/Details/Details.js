@@ -1,7 +1,22 @@
 import React from "react";
 import "./style.scss";
-import DenemeImg from "../../../assets/Face.png";
+import { useLocation } from "react-router";
 const Details = () => {
+  const location = useLocation();
+  const detail = location.state;
+  console.log(location.state);
+  function dangerDescription() {
+    return { __html: detail.description };
+  }
+  function dangerName() {
+    return { __html: detail.name };
+  }
+  const hoverHandler = (event) => {
+    console.log(event.target.firstChild);
+    /* !event.target.firstChild.classList.contains("hover-p") &&
+      event.target.firstChild.classList.add("hover-p");
+    console.log(event.target.firstChild.classList); */
+  };
   return (
     <>
       <div style={{ backgroundColor: "red", height: "400px" }}></div>
@@ -9,7 +24,7 @@ const Details = () => {
         <div className="row">
           <div className="col-md-6 mt-5">
             <img
-              src={DenemeImg}
+              src={detail.api_featured_image}
               class="img-thumbnail mb-5 "
               alt="..."
               style={{
@@ -57,7 +72,7 @@ const Details = () => {
                   aria-controls="pills-contact"
                   aria-selected="false"
                 >
-                  REVIEWS
+                  COLOR PALETTE
                 </button>
               </li>
             </ul>
@@ -68,15 +83,7 @@ const Details = () => {
                 role="tabpanel"
                 aria-labelledby="pills-home-tab"
               >
-                <p>
-                  She exposed painted fifteen are noisier mistake led waiting.
-                  Surprise not wandered speedily husbands although yet end. Are
-                  court tiled cease young built fat one man taken. We highest ye
-                  friends is exposed equally in. Ignorant had too strictly
-                  followed. Astonished as travelling assistance or unreserved oh
-                  pianoforte ye. Five with seen put need tore add neat. Bringing
-                  it is he returned received raptures.
-                </p>
+                <div dangerouslySetInnerHTML={dangerDescription()} />
               </div>
               <div
                 class="tab-pane fade"
@@ -85,10 +92,20 @@ const Details = () => {
                 aria-labelledby="pills-profile-tab"
               >
                 <p>
-                  CAPACITY : <span>40 ML</span>
+                  {detail.tag_list && detail.tag_list.length <= 1
+                    ? "TAG : "
+                    : "TAGS : "}
+                  {detail.tag_list.length > 0 &&
+                    detail.tag_list.map((item, i) => (
+                      <span className="text-capitalize">
+                        {item}
+                        {detail.tag_list.length !== i + 1 && " - "}
+                      </span>
+                    ))}
                 </p>
                 <p>
-                  BRAND : <span>fable&mane</span>
+                  BRAND :{" "}
+                  <span className="text-capitalize">{detail.brand}</span>
                 </p>
               </div>
               <div
@@ -97,17 +114,31 @@ const Details = () => {
                 role="tabpanel"
                 aria-labelledby="pills-contact-tab"
               >
-                ...
+                {detail.product_colors &&
+                  detail.product_colors.map((color) => (
+                    <div
+                      onMouseOver={hoverHandler}
+                      style={{
+                        backgroundColor: `${color.hex_value}`,
+                        height: "50px",
+                        width: "50px",
+                        borderRadius: "50%",
+                        float: "left",
+                        marginLeft: "15px",
+                      }}
+                    >
+                      <p id="color-name">{color.colour_name}</p>
+                    </div>
+                  ))}
               </div>
             </div>
           </div>
           <div className="col-md-6 mt-5">
-            <p className="h2">AIRBRUSH MATTE</p>
-            <p className="h5 text-muted">
-              Skin-perfecting bronzed filter for the face.
-            </p>
+            {/* <p>{detail.name}</p> */}
+            <div className="h2" dangerouslySetInnerHTML={dangerName()} />
+            <p className="h5 text-muted text-capitalize">{detail.category}</p>
             <p className="display-5">
-              <span>$</span> 40{" "}
+              <span>$</span> {detail.price == 0 && `${detail.name.length}.0`}
             </p>
             <div className="row">
               <div className="col-2">

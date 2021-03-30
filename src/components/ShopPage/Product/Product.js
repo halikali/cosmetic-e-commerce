@@ -1,5 +1,6 @@
 import React from "react";
 import { useSelector } from "react-redux";
+import { Link } from "react-router-dom";
 import "./style.scss";
 const Product = () => {
   const products = useSelector((state) => state.productsReducer.data);
@@ -15,9 +16,12 @@ const Product = () => {
               alt={product.name}
             />
             <div className="card-body">
-              <h5 className="card-title">{product.name}</h5>
+              <Link to={{ pathname: "/details", state: product }}>
+                <h5 className="card-title">{product.name}</h5>
+              </Link>
               <p className="card-text">
-                <span>$</span> {product.price}{" "}
+                <span>$</span>{" "}
+                {product.price == 0 && `${product.name.length}.0`}
               </p>
             </div>
           </div>
