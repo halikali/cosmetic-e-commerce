@@ -1,6 +1,16 @@
+import { useDispatch } from "react-redux";
+import {
+  getFilteredProducts,
+  getProducts,
+} from "../../../store/actions/actions";
 import ProductType from "../ProductType/ProductType";
 
 export default function ProductTypes() {
+  const dispatch = useDispatch();
+
+  const filtered = () => {
+    dispatch(getProducts());
+  };
   return (
     <section className="mb-4 product-type">
       <h6 className="font-weight-bold mb-3 text-left text-uppercase">
@@ -16,6 +26,10 @@ export default function ProductTypes() {
       <ProductType productType="lipstick" />
       <ProductType productType="mascara" />
       <ProductType productType="nail-polish" />
+      <button className="btn btn-large btn-outline-dark" onClick={filtered}>
+        {" "}
+        RESET
+      </button>
     </section>
   );
 }

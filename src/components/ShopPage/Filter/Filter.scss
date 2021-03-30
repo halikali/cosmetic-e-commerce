@@ -1,5 +1,9 @@
 .container {
+  position: sticky;
+  top: 150px;
+  
   .filter-bar {
+    
     .price {
       input[type="range"] {
         position: absolute;

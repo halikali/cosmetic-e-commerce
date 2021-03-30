@@ -5,7 +5,7 @@ const Product = () => {
   const products = useSelector((state) => state.productsReducer.data);
 
   return (
-    <div className="row product-section">
+    <div className="row product-section margin-bottom">
       {products &&
         products.map((product) => (
           <div className="card col-md-4 position-relative">

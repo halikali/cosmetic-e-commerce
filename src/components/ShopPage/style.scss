@@ -1,5 +1,6 @@
 .product-section{
     margin-top: 35px;
+    margin-bottom: 500px;
     .card{
         img{
             height: 40%;
@@ -8,8 +9,8 @@
         .card-body{
            
             .card-title{
-                width: 200px;
-                height: 50px;
+                width: auto;
+                height: auto;
                 display: flex;
                 justify-content: center; 
                 margin: auto;
