@@ -1,68 +1,6 @@
 .container {
   .filter-bar {
     .price {
-      input[type="range"] {
-        position: absolute;
-        z-index: 2;
-        height: 10px;
-        width: 100%;
-      }
-
-      #input-left {
-        top: -100px;
-      }
-
-      #input-right {
-        top: -50px;
-      }
-      .slider {
-        position: relative;
-        z-index: 1;
-        height: 10px;
-        margin: 0 15px;
-
-        .track {
-          position: absolute;
-          z-index: 1;
-          left: 0;
-          right: 0;
-          top: 0;
-          bottom: 0;
-          border-radius: 5px;
-          background-color: #c6aee7;
-        }
-
-        .range {
-          position: absolute;
-          z-index: 2;
-          left: 25%;
-          right: 25%;
-          top: 0;
-          bottom: 0;
-          border-radius: 5px;
-          background-color: #6200ee;
-        }
-
-        .thumb {
-          position: absolute;
-          z-index: 3;
-          width: 30px;
-          height: 30px;
-          background-color: #6200ee;
-          border-radius: 50%;
-          opacity: 0.3;
-        }
-
-        .left {
-          left: 25%;
-          transform: translate(-15px, -10px);
-        }
-
-        .right {
-          right: 25%;
-          transform: translate(15px, -10px);
-        }
-      }
     }
   }
 }

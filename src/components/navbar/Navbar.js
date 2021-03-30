@@ -5,8 +5,16 @@ import Person from "../../assets/header/person.svg";
 import Search from "../../assets/header/search.svg";
 import Heart from "../../assets/header/suit-heart.svg";
 import { Link } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { getProducts } from "../../store/actions/actions";
 
 const Navbar = () => {
+  const dispatch = useDispatch();
+
+  const onClickHandler = () => {
+    dispatch(getProducts("", ""));
+  };
+
   let lastKnownScrollPosition = 0;
 
   document.addEventListener("scroll", function (e) {
@@ -48,7 +56,9 @@ const Navbar = () => {
           </Link>
 
           <Link className="nav-item nav-link active" id="shop" to="/shop">
-            <span className="a">SHOP</span>
+            <span className="a" onClick={onClickHandler}>
+              SHOP
+            </span>
           </Link>
           <Link className="nav-item nav-link active" id="headers" to="/headers">
             <span className="a">HEADERS</span>
