@@ -1,16 +1,30 @@
 .text-capitalize {
   text-transform: capitalize;
 }
-#color-name {
+.color-palette{
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  float: left;
+  margin: 8px;
+}
+.color-name {
   display: block;
-  width: max-content;
   line-height: 3;
   position: relative;
-  top: -50px;
-  opacity: 0;
-
-  background-color: gray;
+  top: -80px;
+  background-color: rgba(128, 128, 128, 0.562);
+  z-index: 99;
+  visibility: hidden;
+  color: white;
 }
 .hover-p {
-  opacity: 1;
+  display: block;
+  line-height: 3;
+  position: relative;
+  top: -80px;
+  background-color: rgba(128, 128, 128, 0.562);
+  z-index: 99;
+  color: white;
+  visibility: visible;
 }
