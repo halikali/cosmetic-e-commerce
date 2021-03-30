@@ -8,6 +8,7 @@ import Shop from "./Pages/Shop";
 import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { getProducts } from "./store/actions/actions";
+import Details from "./components/ShopPage/Details/Details";
 
 function App() {
   const dispatch = useDispatch();
@@ -21,6 +22,9 @@ function App() {
         <Switch>
           <Route path="/shop">
             <Shop />
+          </Route>
+          <Route path="/details">
+            <Details />
           </Route>
           <Route exact path="/">
             <Home />
