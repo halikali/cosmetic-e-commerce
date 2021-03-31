@@ -35,6 +35,7 @@ const Cart = () => {
   const increaseHandler = (item) => {
     console.log(item, "item");
     //console.log(reduceItems([...reducedCartItems, item]));
+    console.log(reduceItems([...reducedCartItems, item]), "inc");
     SetReducedCartItems(reduceItems([...reducedCartItems, item]));
   };
   const decreaseHandler = (item) => {};
