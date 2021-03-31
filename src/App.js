@@ -28,9 +28,9 @@ function App() {
           <Route path="/details">
             <Details />
           </Route>
-          <Route path="/cart">
+          {/* <Route path="/cart">
             <ProductInCart />
-          </Route>
+          </Route> */}
           <Route exact path="/">
             <Home />
           </Route>
