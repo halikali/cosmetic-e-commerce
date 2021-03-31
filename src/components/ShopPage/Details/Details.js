@@ -1,10 +1,37 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./style.scss";
 import { useLocation } from "react-router";
+import { useDispatch, useSelector } from "react-redux";
+import { addToCart } from "../../../store/actions/actions";
 const Details = () => {
+  const [productAmount, setProductAmount] = useState(1);
+  const items = useSelector((state) => state.cartReducer.cartItems);
+  useEffect(() => {
+    console.log(productAmount, "useeffect");
+    console.log(items, "items");
+  }, [productAmount, items]);
   const location = useLocation();
   const detail = location.state;
   console.log(location.state);
+  //redux
+
+  const dispatch = useDispatch();
+
+  console.log(items);
+  const cartHandler = (item, amount) => {
+    for (let i = 0; i < amount; i++) {
+      dispatch(addToCart(item));
+    }
+  };
+  const increaseAmount = () => {
+    setProductAmount(productAmount + 1);
+  };
+  const decreaseAmount = () => {
+    productAmount <= 1
+      ? setProductAmount(1)
+      : setProductAmount(productAmount - 1);
+  };
+
   function dangerDescription() {
     return { __html: detail.description };
   }
@@ -139,25 +166,36 @@ const Details = () => {
             <div className="h2" dangerouslySetInnerHTML={dangerName()} />
             <p className="h5 text-muted text-capitalize">{detail.category}</p>
             <p className="display-5">
-              <span>$</span>{" "}
-              {detail.price == 0.0 ? `${detail.name.length}.0` : detail.price}
+              <span>$</span> {detail.price}
             </p>
             <div className="row">
               <div className="col-2">
-                <button type="button" class="btn btn-sm btn-outline-dark">
+                <button
+                  onClick={decreaseAmount}
+                  type="button"
+                  class="btn btn-sm btn-outline-dark"
+                >
                   -
                 </button>
               </div>
               <div className="col-1">
-                <p className="display-6"> 1</p>
+                <p className="display-6"> {productAmount}</p>
               </div>
               <div className="col-2">
-                <button type="button" class="btn btn-sm btn-outline-dark">
+                <button
+                  onClick={increaseAmount}
+                  type="button"
+                  class="btn btn-sm btn-outline-dark"
+                >
                   +
                 </button>
               </div>
               <div className="col-6 ">
-                <button type="button" class="btn btn-lg btn-outline-dark">
+                <button
+                  onClick={() => cartHandler(detail, productAmount)}
+                  type="button"
+                  class="btn btn-lg btn-outline-dark"
+                >
                   Add to Cart
                 </button>
               </div>

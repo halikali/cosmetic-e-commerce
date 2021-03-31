@@ -16,36 +16,52 @@ export default function ProductTypes() {
       <h6 className="font-weight-bold mb-3 text-left text-uppercase">
         Product Types
       </h6>
-      <li className="text-left " onClick={() => setProduct("=blush")}>
-        <ProductType productType="blush" />
-      </li>
-      <li onClick={() => setProduct("=eyebrow")}>
-        <ProductType productType="eyebrow" />
-      </li>
-      <li onClick={() => setProduct("=bronzer")}>
-        <ProductType productType="bronzer" />
-      </li>
-      <li onClick={() => setProduct("=eyeshadow")}>
-        <ProductType productType="eyeshadow" />
-      </li>
-      <li onClick={() => setProduct("=eyeliner")}>
-        <ProductType productType="eyeliner" />
-      </li>
-      <li onClick={() => setProduct("=foundation")}>
-        <ProductType productType="foundation" />
-      </li>
-      <li onClick={() => setProduct("=lip_liner")}>
-        <ProductType productType="lip-liner" />
-      </li>
-      <li onClick={() => setProduct("=lipstick")}>
-        <ProductType productType="lipstick" />
-      </li>
-      <li onClick={() => setProduct("=mascara")}>
-        <ProductType productType="mascara" />
-      </li>
-      <li onClick={() => setProduct("=nail_polish")}>
-        <ProductType productType="nail-polish" />
-      </li>
+      <ProductType productType="blush" onClick={() => setProduct("=blush")} />
+
+      <ProductType
+        productType="eyebrow"
+        onClick={() => setProduct("=eyebrow")}
+      />
+
+      <ProductType
+        productType="bronzer"
+        onClick={() => setProduct("=bronzer")}
+      />
+
+      <ProductType
+        productType="eyeshadow"
+        onClick={() => setProduct("=eyeshadow")}
+      />
+
+      <ProductType
+        productType="eyeliner"
+        onClick={() => setProduct("=eyeliner")}
+      />
+
+      <ProductType
+        productType="foundation"
+        onClick={() => setProduct("=foundation")}
+      />
+
+      <ProductType
+        productType="lip liner"
+        onClick={() => setProduct("=lip_liner")}
+      />
+
+      <ProductType
+        productType="lipstick"
+        onClick={() => setProduct("=lipstick")}
+      />
+
+      <ProductType
+        productType="mascara"
+        onClick={() => setProduct("=mascara")}
+      />
+
+      <ProductType
+        productType="nail polish"
+        onClick={() => setProduct("=nail_polish")}
+      />
     </section>
   );
 }

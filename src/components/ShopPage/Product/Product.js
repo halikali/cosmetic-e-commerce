@@ -39,9 +39,12 @@ const Product = () => {
 
               <p className="card-text">
                 <span>$</span>{" "}
-                {product.price == 0.0
-                  ? `${product.name.length}.0`
-                  : product.price}
+                {
+                  (product.price =
+                    product.price == 0.0
+                      ? `${product.name.length}.0`
+                      : `${product.price}`)
+                }
               </p>
             </div>
           </div>
