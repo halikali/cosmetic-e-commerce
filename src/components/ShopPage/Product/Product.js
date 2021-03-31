@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 import "./style.scss";
 const Product = () => {
   const products = useSelector((state) => state.productsReducer.data);
-
   return (
     <div className="row product-section">
       {products &&
@@ -16,9 +15,28 @@ const Product = () => {
               alt={product.name}
             />
             <div className="card-body">
-              <Link to={{ pathname: "/details", state: product }}>
+              <Link
+                to={{ pathname: "/details", state: product }}
+                className="link"
+              >
                 <h5 className="card-title">{product.name}</h5>
               </Link>
+              <textarea
+                id="w3review"
+                name="w3review"
+                maxLength="30"
+                value={product.description && product.description}
+                readOnly
+                rows="2"
+                style={{
+                  overflow: "hidden",
+                  border: "none",
+                  outline: "none",
+                  resize: "none",
+                  padding: "6px",
+                }}
+              />
+
               <p className="card-text">
                 <span>$</span>{" "}
                 {

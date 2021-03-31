@@ -6,6 +6,10 @@
       object-fit: contain;
     }
     .card-body {
+      .link{
+        text-decoration: none;
+        color: black;
+      }
       .card-title {
         width: auto;
         height: auto;

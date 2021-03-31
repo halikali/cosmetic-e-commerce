@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Slider from "../components/HomePage/Slider/Slider";
 import InstagramAndImages from "../components/HomePage/InstagramAndImages/InstagramAndImages";
 import Brands from "../components/HomePage/Brands/Brands";
@@ -11,6 +11,9 @@ import Subscribe from "../components/HomePage/Subscribe/Subscribe";
 import TwoBlogsPart from "../components/HomePage/TwoBlogsPart/TwoBlogsPart";
 
 const Home = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <>
       <Slider />

@@ -40,7 +40,7 @@ const Navbar = () => {
 
         <nav className="nav justify-content-center " id="nav">
           <button
-            class="navbar-toggler"
+            className="navbar-toggler"
             type="button"
             data-toggle="collapse"
             data-target="#navbarTogglerDemo03"
@@ -48,7 +48,7 @@ const Navbar = () => {
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
-            <span class="navbar-toggler-icon"></span>
+            <span className="navbar-toggler-icon"></span>
           </button>
 
           <Link className="nav-item nav-link active" id="home" to="/">
