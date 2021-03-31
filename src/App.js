@@ -9,6 +9,7 @@ import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { getProducts } from "./store/actions/actions";
 import Details from "./components/ShopPage/Details/Details";
+import Cart from "./Pages/Cart";
 
 function App() {
   const dispatch = useDispatch();
@@ -26,6 +27,9 @@ function App() {
           </Route>
           <Route path="/details">
             <Details />
+          </Route>
+          <Route path="/cart">
+            <Cart />
           </Route>
           <Route exact path="/">
             <Home />
