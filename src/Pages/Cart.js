@@ -1,33 +1,51 @@
+import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 
 const Cart = () => {
   const cartItems = useSelector((state) => state.cartReducer.cartItems);
-  console.log(cartItems, "cart page");
-  let reducedCartItems = cartItems.reduce((ar, obj) => {
-    let bool = false;
-    if (!ar) {
-      ar = [];
-    }
-    ar.forEach((a) => {
-      if (a.id === obj.id) {
-        a.count++;
-        bool = true;
+  const reduceItems = (Items) => {
+    let NewCartItems = Items.reduce((ar, obj) => {
+      let bool = false;
+      if (!ar) {
+        ar = [];
       }
-    });
-    if (!bool) {
-      obj.count = 1;
-      ar.push(obj);
-    }
-    return ar;
-  }, []);
-  console.log(reducedCartItems);
+      ar.forEach((a) => {
+        if (a.id === obj.id) {
+          a.count++;
+          bool = true;
+        }
+      });
+      if (!bool) {
+        obj.count = 1;
+        ar.push(obj);
+      }
+      return ar;
+    }, []);
+    return NewCartItems;
+  };
+  const [reducedCartItems, SetReducedCartItems] = useState(
+    reduceItems(cartItems)
+  );
+  useEffect(() => {
+    console.log(reducedCartItems, "cart sayfasi icinde reduced veriler");
+  }, [reducedCartItems]);
+
+  console.log(cartItems, "shoptan gelen veriler");
+  //ekleme ve cikartma butonlari yarim kaldi
+  const increaseHandler = (item) => {
+    console.log(item, "item");
+    //console.log(reduceItems([...reducedCartItems, item]));
+    SetReducedCartItems(reduceItems([...reducedCartItems, item]));
+  };
+  const decreaseHandler = (item) => {};
   return (
     <>
       <div style={{ backgroundColor: "red", height: "500px" }}></div>
       {cartItems.length > 0 ? (
         <>
-          {reducedCartItems.map((reducedCartItem) => (
+          {reducedCartItems.map((reducedCartItem, i) => (
             <div
+              key={i}
               style={{
                 marginBottom: "30px",
                 border: "1px solid black",
@@ -46,8 +64,12 @@ const Cart = () => {
                 {reducedCartItem.count}
                 {" adet"}
               </p>
-              <button>+</button>
-              <button>-</button>
+              <button onClick={() => increaseHandler(reducedCartItem)}>
+                +
+              </button>
+              <button onClick={() => decreaseHandler(reducedCartItem)}>
+                -
+              </button>
             </div>
           ))}
         </>
