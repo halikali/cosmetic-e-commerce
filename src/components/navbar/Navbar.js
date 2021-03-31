@@ -96,10 +96,9 @@ const Navbar = () => {
         </div>
 
         <div className="bagicon">
-          <a href="/">
-            {" "}
+          <Link to="/cart">
             <img width="28" height="22" src={Bag} alt="bag" />
-          </a>
+          </Link>
         </div>
       </div>
     </section>
