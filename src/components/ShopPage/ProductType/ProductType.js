@@ -3,27 +3,13 @@ import { useDispatch } from "react-redux";
 import { getProducts } from "../../../store/actions/actions";
 import "./style.scss";
 
-export default function ProductType({ productType }) {
-  // const dispatch = useDispatch();
-  // const [product, setProduct] = useState("");
-
-  // const onClickHandler = (p) => {
-  //   setProduct(() => p);
-  //   // setProduct(p);
-  //   // console.log(p);
-  //   dispatch(getProducts("product_type", product));
-  //   console.log(p);
-  // };
-
-  // useEffect(() => {
-  //   dispatch(getProducts("product_type", product));
-  //   console.log("useEffect", product);
-  // }, []);
-
+export default function ProductType({ productType, onClick }) {
   return (
     <div className="form-check pl-0 mb-3 text-left">
       <div className="cursor">
-        <p className="text-uppercase">{productType}</p>
+        <p className="text-uppercase" onClick={onClick}>
+          {productType}
+        </p>
       </div>
     </div>
   );

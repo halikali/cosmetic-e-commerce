@@ -138,8 +138,7 @@ const Details = () => {
             <div className="h2" dangerouslySetInnerHTML={dangerName()} />
             <p className="h5 text-muted text-capitalize">{detail.category}</p>
             <p className="display-5">
-              <span>$</span>{" "}
-              {detail.price == 0.0 ? `${detail.name.length}.0` : detail.price}
+              <span>$</span> {detail.price}
             </p>
             <div className="row">
               <div className="col-2">
