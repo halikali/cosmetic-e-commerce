@@ -9,3 +9,11 @@ export const getProducts = (productTypes = "", productType) => {
       );
   };
 };
+export const addItemToCart = (item) => ({
+  type: "ADD_PRODUCT",
+  payload: item,
+});
+export const removeItemFromCart = (item) => ({
+  type: "REMOVE_PRODUCT",
+  payload: item,
+});
