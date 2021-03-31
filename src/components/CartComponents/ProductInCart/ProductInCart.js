@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 
 import DenemeImg from "../../../assets/Lips.png";
+import TopComponent from "../../TopComponent/TopComponent";
 const ProductInCart = () => {
   const cartItems = useSelector((state) => state.cartReducer.cartItems);
   const reduceItems = (Items) => {
@@ -49,9 +50,7 @@ const ProductInCart = () => {
 
   return (
     <div className="row">
-      <div
-        style={{ backgroundColor: "red", width: "100%", height: "500px" }}
-      ></div>
+      <TopComponent text="CART" />
       <div className="row">
         <div className="col-8">
           {cartItems.length > 0 && (

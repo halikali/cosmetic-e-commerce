@@ -19,7 +19,7 @@ const Navbar = () => {
 
   document.addEventListener("scroll", function (e) {
     lastKnownScrollPosition = window.scrollY;
-    if (lastKnownScrollPosition > 200) {
+    if (lastKnownScrollPosition > 150) {
       document.getElementById("header").classList.add("navbar-after-scroll");
     } else {
       document.getElementById("header").classList.remove("navbar-after-scroll");

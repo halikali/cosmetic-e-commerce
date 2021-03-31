@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
+import TopComponent from "../components/TopComponent/TopComponent";
 
 const Cart = () => {
   const cartItems = useSelector((state) => state.cartReducer.cartItems);
@@ -41,7 +42,7 @@ const Cart = () => {
   const decreaseHandler = () => {};
   return (
     <>
-      <div style={{ backgroundColor: "red", height: "500px" }}></div>
+      {/* <div style={{ backgroundColor: "red", height: "500px" }}></div> */}
       {cartItems.length > 0 ? (
         <>
           {reducedCartItems.map((reducedCartItem, i) => (
