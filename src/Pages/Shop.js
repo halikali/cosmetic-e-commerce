@@ -1,7 +1,12 @@
+import { useEffect } from "react";
 import Filter from "../components/ShopPage/Filter/Filter";
 import Product from "../components/ShopPage/Product/Product";
 
 const Shop = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <>
       {" "}

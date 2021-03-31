@@ -13,6 +13,7 @@ const Details = () => {
   }
   const hoverHandler = (event) => {
     // event.target.firstChild.classList.add("hover-p");
+    // event.target.firstChild.classList.add("hover-p");
     // event.target.children[0].classList.add("hover-p");
     // console.log(event);
     // console.log(event.target.childNodes[0].classList);
