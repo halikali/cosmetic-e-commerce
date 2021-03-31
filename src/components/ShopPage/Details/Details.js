@@ -3,6 +3,7 @@ import "./style.scss";
 import { useLocation } from "react-router";
 import { useDispatch, useSelector } from "react-redux";
 import { addToCart } from "../../../store/actions/actions";
+import TopComponent from "../../TopComponent/TopComponent";
 const Details = () => {
   const [productAmount, setProductAmount] = useState(1);
   const items = useSelector((state) => state.cartReducer.cartItems);
@@ -50,7 +51,7 @@ const Details = () => {
   };
   return (
     <>
-      <div style={{ backgroundColor: "red", height: "400px" }}></div>
+      <TopComponent text="PRODUCT" />
       <div className="container">
         <div className="row">
           <div className="col-md-6 mt-5">
