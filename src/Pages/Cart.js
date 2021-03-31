@@ -38,7 +38,7 @@ const Cart = () => {
     console.log(reduceItems([...reducedCartItems, item]), "inc");
     SetReducedCartItems(reduceItems([...reducedCartItems, item]));
   };
-  const decreaseHandler = (item) => {};
+  const decreaseHandler = () => {};
   return (
     <>
       <div style={{ backgroundColor: "red", height: "500px" }}></div>

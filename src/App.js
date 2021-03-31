@@ -14,7 +14,6 @@ import ProductInCart from "./components/CartComponents/ProductInCart/ProductInCa
 
 import Cart from "./Pages/Cart";
 
-
 function App() {
   const dispatch = useDispatch();
   useEffect(() => {
@@ -33,14 +32,14 @@ function App() {
             <Details />
           </Route>
 
-          {/* <Route path="/cart">
+          <Route path="/cart">
             <ProductInCart />
+          </Route>
+
+          {/*  <Route path="/cart">
+            <Cart />
           </Route> */}
 
-          <Route path="/cart">
-            <Cart />
-          </Route>
-    
           <Route exact path="/">
             <Home />
           </Route>
