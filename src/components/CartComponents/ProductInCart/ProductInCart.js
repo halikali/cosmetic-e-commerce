@@ -1,11 +1,12 @@
 import React from "react";
 import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
+
 import TopComponent from "../../TopComponent/TopComponent";
 import "./style.scss";
 const ProductInCart = () => {
   const cartItems = useSelector((state) => state.cartReducer.cartItems);
-  const reduceItems = (Items) => {
+  const reduceItems = (Items, type) => {
     let NewCartItems = Items.reduce((ar, obj) => {
       let bool = false;
       if (!ar) {
@@ -13,12 +14,15 @@ const ProductInCart = () => {
       }
       ar.forEach((a) => {
         if (a.id === obj.id) {
-          a.count++;
+          type === "inc" && a.count++;
+          type === "dec" && a.count >= 1 && a.count--;
           bool = true;
         }
       });
       if (!bool) {
-        obj.count = 1;
+        if (obj.count === undefined) {
+          obj.count = 1;
+        }
         ar.push(obj);
       }
       return ar;
@@ -26,11 +30,11 @@ const ProductInCart = () => {
     return NewCartItems;
   };
   const [reducedCartItems, SetReducedCartItems] = useState(
-    reduceItems(cartItems)
+    reduceItems(cartItems, "inc")
   );
   const [count, setCount] = useState(0);
   useEffect(() => {
-    console.log(reducedCartItems, "cart sayfasi icinde reduced veriler");
+    console.log(reducedCartItems, "useeffect ici");
   }, [reducedCartItems, count]);
 
   console.log(cartItems, "shoptan gelen veriler");
@@ -38,13 +42,14 @@ const ProductInCart = () => {
   const increaseHandler = (item) => {
     console.log(item, "item");
     //console.log(reduceItems([...reducedCartItems, item]));
-    setCount(count + 1);
-    console.log(reduceItems([...reducedCartItems, item]), "inc");
-    SetReducedCartItems(reduceItems([...reducedCartItems, item]));
+    //setCount(count + 1);
+    //console.log(reduceItems([...reducedCartItems, item]), "inc");
+    SetReducedCartItems(reduceItems([...reducedCartItems, item], "inc"));
   };
   const decreaseHandler = (item) => {
-    console.log(reduceItems([...reducedCartItems, item]));
-    setCount(count + 1);
+    //  console.log(reduceItems([...reducedCartItems, item]));
+    // setCount(count + 1);
+    SetReducedCartItems(reduceItems([...reducedCartItems, item], "dec"));
   };
 
   return (
@@ -121,6 +126,13 @@ const ProductInCart = () => {
           </li>
         </ul>
       </div>
+      <>
+        TOTAL:{" "}
+        {reducedCartItems.reduce(
+          (acc, current) => acc + current.count * current.price,
+          0
+        )}
+      </>
     </div>
   );
 };
