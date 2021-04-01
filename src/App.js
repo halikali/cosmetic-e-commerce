@@ -9,11 +9,7 @@ import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { getProducts } from "./store/actions/actions";
 import Details from "./components/ShopPage/Details/Details";
-
-import ProductInCart from "./components/CartComponents/ProductInCart/ProductInCart";
-
 import Cart from "./Pages/Cart";
-import Checkout from "./components/CartComponents/Checkout/Checkout";
 
 function App() {
   const dispatch = useDispatch();
@@ -34,11 +30,7 @@ function App() {
           </Route>
 
           <Route path="/cart">
-            <ProductInCart />
-          </Route>
-
-          <Route path="/checkout">
-            <Checkout />
+            <Cart />
           </Route>
 
           <Route exact path="/">

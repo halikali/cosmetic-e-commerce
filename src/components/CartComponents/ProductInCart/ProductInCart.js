@@ -53,10 +53,9 @@ const ProductInCart = () => {
   };
 
   return (
-    <div className="row">
-      <TopComponent text="CART" />
+    <>
       <div className="row">
-        <div className="col-8">
+        <div className="col-12">
           {cartItems.length > 0 && (
             <div className="row">
               <p className="col-3">product</p>
@@ -68,7 +67,7 @@ const ProductInCart = () => {
         </div>
       </div>
 
-      <div className="card col-md-8">
+      <div className="card col-12">
         <ul className="list-group list-group-flush">
           <li className="list-group-item">
             {cartItems.length <= 0 ? (
@@ -89,7 +88,7 @@ const ProductInCart = () => {
                   </div>
                   <div className="col-4">
                     <div className="row">
-                      <div className="col-2">
+                      <div className="col-1">
                         <button
                           type="button"
                           class="btn btn-sm btn-outline-dark"
@@ -98,10 +97,13 @@ const ProductInCart = () => {
                           -
                         </button>
                       </div>
-                      <div className="col-1">
-                        <p className="display-6"> {reducedCartItem.count}</p>
+                      <div className="col-3">
+                        <p className="display-6 text-center">
+                          {" "}
+                          {reducedCartItem.count}
+                        </p>
                       </div>
-                      <div className="col-2">
+                      <div className="col-1">
                         <button
                           type="button"
                           class="btn btn-sm btn-outline-dark"
@@ -110,7 +112,7 @@ const ProductInCart = () => {
                           +
                         </button>
                       </div>
-                      <div className="col-6 ">
+                      <div className="col-5">
                         {/* <button type="button" class="btn btn-lg btn-outline-dark">
                       Add to Cart
                     </button> */}
@@ -126,14 +128,14 @@ const ProductInCart = () => {
           </li>
         </ul>
       </div>
-      <>
+      {/* <>
         TOTAL:{" "}
         {reducedCartItems.reduce(
           (acc, current) => acc + current.count * current.price,
           0
         )}
-      </>
-    </div>
+      </> */}
+    </>
   );
 };
 
