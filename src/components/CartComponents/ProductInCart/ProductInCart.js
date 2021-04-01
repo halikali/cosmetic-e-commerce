@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 
 import TopComponent from "../../TopComponent/TopComponent";
+import "./style.scss";
 const ProductInCart = () => {
   const cartItems = useSelector((state) => state.cartReducer.cartItems);
   const reduceItems = (Items, type) => {

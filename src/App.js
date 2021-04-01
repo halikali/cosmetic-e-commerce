@@ -13,6 +13,7 @@ import Details from "./components/ShopPage/Details/Details";
 import ProductInCart from "./components/CartComponents/ProductInCart/ProductInCart";
 
 import Cart from "./Pages/Cart";
+import Checkout from "./components/CartComponents/Checkout/Checkout";
 
 function App() {
   const dispatch = useDispatch();
@@ -36,9 +37,9 @@ function App() {
             <ProductInCart />
           </Route>
 
-          {/*  <Route path="/cart">
-            <Cart />
-          </Route> */}
+          <Route path="/checkout">
+            <Checkout />
+          </Route>
 
           <Route exact path="/">
             <Home />

@@ -40,15 +40,17 @@ const Details = () => {
     return { __html: detail.name };
   }
   const hoverHandler = (event) => {
+    console.log(event);
+    // console.log(event.target.children[0].classList.add("hover-p"));
     // event.target.firstChild.classList.add("hover-p");
-    // event.target.firstChild.classList.add("hover-p");
-    // event.target.children[0].classList.add("hover-p");
-    // console.log(event);
-    // console.log(event.target.childNodes[0].classList);
+    console.log(event.target.childNodes[0].classList);
+    // !event.target.childNodes[0].classList.contains("hover-p") &&
+    //   event.target.childNodes[0].classList.add("hover-p");
   };
   const downHandler = (event) => {
     // event.target.firstChild.classList.remove("hover-p");
   };
+
   return (
     <>
       <TopComponent text="PRODUCT" />
@@ -57,17 +59,17 @@ const Details = () => {
           <div className="col-md-6 mt-5">
             <img
               src={detail.api_featured_image}
-              class="img-thumbnail mb-5 "
+              className="img-thumbnail mb-5 "
               alt="..."
               style={{
                 width: "460px",
                 height: "380px",
               }}
             />
-            <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
-              <li class="nav-item" role="presentation">
+            <ul className="nav nav-pills mb-3" id="pills-tab" role="tablist">
+              <li className="nav-item" role="presentation" key="1">
                 <button
-                  class="nav-link active"
+                  className="nav-link active"
                   id="pills-home-tab"
                   data-bs-toggle="pill"
                   data-bs-target="#pills-home"
@@ -79,9 +81,9 @@ const Details = () => {
                   DESCRIPTION
                 </button>
               </li>
-              <li class="nav-item" role="presentation">
+              <li className="nav-item" role="presentation" key="2">
                 <button
-                  class="nav-link"
+                  className="nav-link"
                   id="pills-profile-tab"
                   data-bs-toggle="pill"
                   data-bs-target="#pills-profile"
@@ -93,9 +95,9 @@ const Details = () => {
                   ADDITIONAL INFORMATION
                 </button>
               </li>
-              <li class="nav-item" role="presentation">
+              <li className="nav-item" role="presentation" key="3">
                 <button
-                  class="nav-link"
+                  className="nav-link"
                   id="pills-contact-tab"
                   data-bs-toggle="pill"
                   data-bs-target="#pills-contact"
@@ -108,9 +110,9 @@ const Details = () => {
                 </button>
               </li>
             </ul>
-            <div class="tab-content" id="pills-tabContent">
+            <div className="tab-content" id="pills-tabContent">
               <div
-                class="tab-pane fade show active"
+                className="tab-pane fade show active"
                 id="pills-home"
                 role="tabpanel"
                 aria-labelledby="pills-home-tab"
@@ -118,7 +120,7 @@ const Details = () => {
                 <div dangerouslySetInnerHTML={dangerDescription()} />
               </div>
               <div
-                class="tab-pane fade"
+                className="tab-pane fade"
                 id="pills-profile"
                 role="tabpanel"
                 aria-labelledby="pills-profile-tab"
@@ -129,7 +131,7 @@ const Details = () => {
                     : "TAGS : "}
                   {detail.tag_list.length > 0 &&
                     detail.tag_list.map((item, i) => (
-                      <span className="text-capitalize">
+                      <span className="text-capitalize" key={item.name}>
                         {item}
                         {detail.tag_list.length !== i + 1 && " - "}
                       </span>
@@ -141,7 +143,7 @@ const Details = () => {
                 </p>
               </div>
               <div
-                class="tab-pane fade"
+                className="tab-pane fade"
                 id="pills-contact"
                 role="tabpanel"
                 aria-labelledby="pills-contact-tab"
@@ -152,6 +154,7 @@ const Details = () => {
                       className="color-palette"
                       onMouseOver={hoverHandler}
                       onMouseLeave={downHandler}
+                      key={color.name}
                       style={{
                         backgroundColor: `${color.hex_value}`,
                       }}
@@ -174,7 +177,7 @@ const Details = () => {
                 <button
                   onClick={decreaseAmount}
                   type="button"
-                  class="btn btn-sm btn-outline-dark"
+                  className="btn btn-sm btn-outline-dark"
                 >
                   -
                 </button>
@@ -186,7 +189,7 @@ const Details = () => {
                 <button
                   onClick={increaseAmount}
                   type="button"
-                  class="btn btn-sm btn-outline-dark"
+                  className="btn btn-sm btn-outline-dark"
                 >
                   +
                 </button>
@@ -195,7 +198,7 @@ const Details = () => {
                 <button
                   onClick={() => cartHandler(detail, productAmount)}
                   type="button"
-                  class="btn btn-lg btn-outline-dark"
+                  className="btn btn-lg btn-outline-dark"
                 >
                   Add to Cart
                 </button>
