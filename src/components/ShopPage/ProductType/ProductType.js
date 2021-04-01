@@ -1,6 +1,3 @@
-import { useEffect, useState } from "react";
-import { useDispatch } from "react-redux";
-import { getProducts } from "../../../store/actions/actions";
 import "./style.scss";
 
 export default function ProductType({ productType, onClick }) {
