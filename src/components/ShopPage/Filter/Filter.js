@@ -4,7 +4,11 @@ import "./Filter.scss";
 import "rc-slider/assets/index.css";
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { getProductsForPriceFilter } from "../../../store/actions/actions";
+import {
+  getProductsByBrand,
+  getProductsForPriceFilter,
+} from "../../../store/actions/actions";
+import ProductType from "../ProductType/ProductType";
 
 const Filter = () => {
   const products = useSelector((state) => state.productsReducer.data);
@@ -12,7 +16,7 @@ const Filter = () => {
   const [secondValue, setSecondValue] = useState(0);
   const [brands, setBrands] = useState([]);
   const dispatch = useDispatch();
-
+  const productType = useSelector((state) => state.filterReducer.product);
   useEffect(() => {
     setBrands(getBrands());
   }, [products]);
@@ -33,6 +37,10 @@ const Filter = () => {
     return Object.entries(allBrands);
   };
 
+  const onClickHandler = (brand) => {
+    console.log(brand);
+    dispatch(getProductsByBrand(productType, brand));
+  };
   return (
     <div className="container bg-white mt-4">
       <section className="filter-bar">
@@ -49,18 +57,11 @@ const Filter = () => {
           <h6>Brands</h6>
           {brands.length > 1 &&
             brands.map((brand) => (
-              <div class="form-check">
-                <input
-                  class="form-check-input"
-                  type="checkbox"
-                  value={brand[0]}
-                  id={brand[0]}
-                />
-                <label class="form-check-label" htmlFor={brand[0]}>
-                  {brand[0]}
-                  <span> ({brand[1]})</span>
-                </label>
-              </div>
+              <ProductType
+                productType={brand[0]}
+                onClick={() => onClickHandler(brand[0])}
+                count={brand[1]}
+              />
             ))}
         </section>
       </section>
