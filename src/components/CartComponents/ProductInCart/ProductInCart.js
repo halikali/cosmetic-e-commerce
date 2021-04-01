@@ -1,9 +1,8 @@
 import React from "react";
 import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
-
-import DenemeImg from "../../../assets/Lips.png";
 import TopComponent from "../../TopComponent/TopComponent";
+import "./style.scss";
 const ProductInCart = () => {
   const cartItems = useSelector((state) => state.cartReducer.cartItems);
   const reduceItems = (Items) => {
