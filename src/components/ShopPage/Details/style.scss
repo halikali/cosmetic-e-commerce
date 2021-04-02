@@ -22,18 +22,56 @@
   letter-spacing: 2px;
   font-size: 1.2rem;
 }
-.hover-p {
-  display: block;
-  line-height: 3;
-  position: relative;
-  top: -80px;
-  background-color: rgba(128, 128, 128, 0.562);
-  z-index: 99;
-  color: white;
-  visibility: visible;
-}
+
 
   .nav-pills .nav-link.active, .nav-pills .show>.nav-link {
     color: #fff;
     background-color: black;
+}
+
+/* Tooltip container */
+.color-palette {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
+}
+
+/* Tooltip text */
+.color-palette .color-name {
+  visibility: hidden;
+  background-color: #555;
+  color: #fff;
+  height: max-content;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+
+  /* Position the tooltip text */
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -60px;
+
+  /* Fade in tooltip */
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+/* Tooltip arrow */
+.color-palette .color-name::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.color-palette:hover .color-name {
+  visibility: visible;
+  opacity: 1;
 }

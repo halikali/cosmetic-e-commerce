@@ -40,10 +40,11 @@ const Details = () => {
     return { __html: detail.name };
   }
   const hoverHandler = (event) => {
-    console.log(event);
+    // debugger;
+    // console.log(event);
     // console.log(event.target.children[0].classList.add("hover-p"));
     // event.target.firstChild.classList.add("hover-p");
-    console.log(event.target.childNodes[0].classList);
+    // console.log(event.target.childNodes[0].classList);
     // !event.target.childNodes[0].classList.contains("hover-p") &&
     //   event.target.childNodes[0].classList.add("hover-p");
   };
