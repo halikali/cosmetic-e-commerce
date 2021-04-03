@@ -10,12 +10,15 @@ import SkinCare from "../components/HomePage/SkinCare/SkinCare";
 import Subscribe from "../components/HomePage/Subscribe/Subscribe";
 import TwoBlogsPart from "../components/HomePage/TwoBlogsPart/TwoBlogsPart";
 
-const Home = () => {
+const Home = ({ handleLogout }) => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
   return (
     <>
+      {/* <div>
+        <button onClick={handleLogout}>Log out</button>
+      </div> */}
       <Slider />
       <ShipSupportMoney />
       <SkinCare />

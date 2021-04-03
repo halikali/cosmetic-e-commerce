@@ -10,6 +10,7 @@ import { useDispatch } from "react-redux";
 import { getProducts } from "./store/actions/actions";
 import Details from "./components/ShopPage/Details/Details";
 import Cart from "./Pages/Cart";
+import Register from "./Pages/Register";
 
 function App() {
   const dispatch = useDispatch();
@@ -20,13 +21,16 @@ function App() {
   return (
     <div className="App">
       <Router>
-        <Navbar />
+        {/* <Navbar /> */}
         <Switch>
           <Route path="/shop">
             <Shop />
           </Route>
           <Route path="/details">
             <Details />
+          </Route>
+          <Route exact path="/login">
+            <Register />
           </Route>
 
           <Route path="/cart">
@@ -40,7 +44,7 @@ function App() {
             <Home />
           </Route>
         </Switch>
-        <Footer />
+        {/* <Footer /> */}
       </Router>
     </div>
   );
