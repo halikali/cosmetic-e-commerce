@@ -21,7 +21,7 @@ function App() {
   return (
     <div className="App">
       <Router>
-        {/* <Navbar /> */}
+        <Navbar />
         <Switch>
           <Route path="/shop">
             <Shop />
@@ -44,7 +44,7 @@ function App() {
             <Home />
           </Route>
         </Switch>
-        {/* <Footer /> */}
+        <Footer />
       </Router>
     </div>
   );

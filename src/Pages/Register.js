@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import fire from "../components/Login/fire";
 import Login from "../components/Login/Login";
-import Home from "./Home";
 
 const Register = () => {
   const [user, setUser] = useState("");

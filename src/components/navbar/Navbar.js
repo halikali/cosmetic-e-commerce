@@ -39,18 +39,6 @@ const Navbar = () => {
         </div>
 
         <nav className="nav justify-content-center " id="nav">
-          <button
-            className="navbar-toggler"
-            type="button"
-            data-toggle="collapse"
-            data-target="#navbarTogglerDemo03"
-            aria-controls="navbarTogglerDemo03"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span className="navbar-toggler-icon"></span>
-          </button>
-
           <Link className="nav-item nav-link active" id="home" to="/">
             <span className="a">HOME</span>
           </Link>
