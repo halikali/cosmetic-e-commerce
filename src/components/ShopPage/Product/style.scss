@@ -10,7 +10,7 @@
       margin-bottom: 20px;
     }
     .card-body {
-      .link{
+      .link {
         text-decoration: none;
         color: black;
       }
@@ -34,6 +34,52 @@
         height: 10px;
       }
     }
+  }
+
+  .pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  .pagination a {
+    padding: 10px;
+    margin: 5px;
+    border-radius: 5px;
+    border: 1px solid #6c7ac9;
+    color: #6c7ac9;
+
+    &:hover {
+      border: 2px solid #6c7ac9;
+      color: white;
+      background: #6c7ac9;
+    }
+  }
+  .pagination-link {
+    font-weight: bold;
+    padding-right: 5px;
+
+    &:hover {
+      border: 2px solid #6c7ac9;
+      background-color: #88cbe7;
+    }
+  }
+
+  .pagination-link-active a {
+    color: #fff;
+    background: #6c7ac9;
+
+    &:hover {
+      background-color: white;
+      color: #6c7ac9;
+    }
+  }
+
+  .pagination-link-disabled a {
+    color: rgb(198, 197, 202);
+    border: 1px solid rgb(198, 197, 202);
   }
 }
 .hov .row{

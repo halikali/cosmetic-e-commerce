@@ -1,14 +1,35 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import "./style.scss";
+import ReactPaginate from "react-paginate";
+
+const perPage = 6;
+
 const Product = () => {
+  const [currentPage, setCurrentPage] = useState([]);
+  const [whichPage, setWhichPage] = useState(0);
+
   const products = useSelector((state) => state.productsReducer.data);
+  
+  const offset = currentPage * perPage;
+  const productsForPages = products.map((product) => product);
+  const currentPageProducts = productsForPages.slice(offset, offset + perPage);
+  const pageCount = Math.ceil(products.length / perPage);
+
+  function handlePageClick({ selected: selectedPage }) {
+    setWhichPage(() => selectedPage);
+    setCurrentPage(whichPage);
+  }
+
+  useEffect(() => {
+    setWhichPage(0);
+  }, [products]);
 
   return (
     <div className="row product-section">
-      {products &&
-        products.map((product) => (
+      {currentPageProducts &&
+        currentPageProducts.map((product) => (
           <div className="card col-md-4 position-relative">
             <div className="hov">
               <div className="row">
@@ -61,6 +82,18 @@ const Product = () => {
             </div>
           </div>
         ))}{" "}
+      <ReactPaginate
+        previousLabel={"← Previous"}
+        nextLabel={"Next →    "}
+        pageCount={pageCount}
+        onPageChange={handlePageClick}
+        forcePage={whichPage}
+        containerClassName={"pagination"}
+        previousLinkClassName={"pagination-link"}
+        nextLinkClassName={"pagination-link"}
+        disabledClassName={"pagination-link-disabled"}
+        activeClassName={"pagination-link-active"}
+      />
     </div>
   );
 };
