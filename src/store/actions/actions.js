@@ -28,7 +28,7 @@ export const getProductsByBrand = (productType, brand) => {
   return (dispatch) => {
     dispatch({ type: "GET_PRODUCTS_REQUEST" });
     fetch(
-      `http://localhost:5000/products?product_type${productType}&brand=${brand}`
+      `http://localhost:5000/products?product_type=${productType}&brand=${brand}`
     )
       .then((response) => response.json())
       .then((data) => dispatch({ type: "GET_PRODUCTS_SUCCESS", payload: data }))

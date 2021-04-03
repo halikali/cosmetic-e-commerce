@@ -16,7 +16,7 @@ export default function ProductTypes() {
     const trimmed = event.target.innerHTML.trim();
     const pr = trimmed.replace(reg, "_");
     setProduct(`=${pr}`);
-    dispatch(keepProduct(event.target.innerHTML));
+    dispatch(keepProduct(pr));
   };
   return (
     <section className="mb-4 product-type">

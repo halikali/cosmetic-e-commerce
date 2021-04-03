@@ -48,13 +48,13 @@
     padding: 10px;
     margin: 5px;
     border-radius: 5px;
-    border: 1px solid #6c7ac9;
-    color: #6c7ac9;
+    border: 1px solid #000000;
+    color: #000000;
 
     &:hover {
-      border: 2px solid #6c7ac9;
+      border: 2px solid #a3a3a3;
       color: white;
-      background: #6c7ac9;
+      background: #000000;
     }
   }
   .pagination-link {
@@ -68,8 +68,8 @@
   }
 
   .pagination-link-active a {
-    color: #fff;
-    background: #6c7ac9;
+    color: rgb(255, 255, 255);
+    background: #000000;
 
     &:hover {
       background-color: white;
@@ -80,6 +80,8 @@
   .pagination-link-disabled a {
     color: rgb(198, 197, 202);
     border: 1px solid rgb(198, 197, 202);
+    opacity: .5;
+    cursor: default;
   }
 }
 .hov .row{

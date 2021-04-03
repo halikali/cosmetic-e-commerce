@@ -38,8 +38,8 @@ const Filter = () => {
   };
 
   const onClickHandler = (brand) => {
-    console.log(brand);
-    dispatch(getProductsByBrand(productType, brand));
+    let br = encodeURI(brand);
+    dispatch(getProductsByBrand(productType, br));
   };
   return (
     <div className="container bg-white mt-4">

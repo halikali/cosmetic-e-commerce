@@ -4,14 +4,14 @@ import { Link } from "react-router-dom";
 import "./style.scss";
 import ReactPaginate from "react-paginate";
 
-const perPage = 6;
+const perPage = 12;
 
 const Product = () => {
   const [currentPage, setCurrentPage] = useState([]);
   const [whichPage, setWhichPage] = useState(0);
 
   const products = useSelector((state) => state.productsReducer.data);
-  
+
   const offset = currentPage * perPage;
   const productsForPages = products.map((product) => product);
   const currentPageProducts = productsForPages.slice(offset, offset + perPage);
