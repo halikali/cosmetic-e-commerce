@@ -11,12 +11,10 @@ const Product = () => {
   const [whichPage, setWhichPage] = useState(0);
 
   const products = useSelector((state) => state.productsReducer.data);
-
+  
   const offset = currentPage * perPage;
-
   const productsForPages = products.map((product) => product);
   const currentPageProducts = productsForPages.slice(offset, offset + perPage);
-
   const pageCount = Math.ceil(products.length / perPage);
 
   function handlePageClick({ selected: selectedPage }) {
@@ -27,16 +25,28 @@ const Product = () => {
   useEffect(() => {
     setWhichPage(0);
   }, [products]);
+
   return (
     <div className="row product-section">
       {currentPageProducts &&
         currentPageProducts.map((product) => (
           <div className="card col-md-4 position-relative">
+            <div className="hov">
+              <div className="row">
+                <button className="btn btn-lg btn-outline-dark col-9">
+                  Add To Card
+                </button>
+                <button className="btn  btn-outline-dark col-3">
+                  <i class="fas fa-heart icon"></i>
+                </button>
+              </div>
+            </div>
             <img
               className="card-img-top"
               src={product.api_featured_image}
               alt={product.name}
             />
+
             <div className="card-body">
               <Link
                 to={{ pathname: "/details", state: product }}
