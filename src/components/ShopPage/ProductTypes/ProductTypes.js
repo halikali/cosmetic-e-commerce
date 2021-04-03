@@ -12,7 +12,10 @@ export default function ProductTypes() {
   }, [product]);
 
   const onClickHandler = (event) => {
-    setProduct(`=${event.target.innerHTML}`);
+    const reg = /\s/;
+    const trimmed = event.target.innerHTML.trim();
+    const pr = trimmed.replace(reg, "_");
+    setProduct(`=${pr}`);
     dispatch(keepProduct(event.target.innerHTML));
   };
   return (

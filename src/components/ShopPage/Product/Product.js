@@ -5,30 +5,21 @@ import "./style.scss";
 const Product = () => {
   const products = useSelector((state) => state.productsReducer.data);
 
-  const changeBackground = (e) => {
-    // if (e.target.parentElement.childElementCount === 2) {
-    //   let btn = document.createElement("BUTTON");
-    //   btn.innerHTML = "CLICK ME";
-    //   btn.classList.add("add-to-card");
-    //   e.target.parentElement.appendChild(btn);
-    //   console.warn(e.target.parentElement.lastChild);
-    // }
-    // console.log(e.target.parentElement.childElementCount);
-  };
-  const removeBackground = (e) => {
-    // if (e.target.parentElement.childElementCount > 2) {
-    //   e.target.parentElement.removeChild(e.target.parentElement.lastChild);
-    // }
-  };
-  // onMouseOut={removeBackground}
   return (
     <div className="row product-section">
       {products &&
         products.map((product) => (
-          <div
-            className="card col-md-4 position-relative"
-            onMouseOver={changeBackground}
-          >
+          <div className="card col-md-4 position-relative">
+            <div className="hov">
+              <div className="row">
+                <button className="btn btn-lg btn-outline-dark col-9">
+                  Add To Card
+                </button>
+                <button className="btn  btn-outline-dark col-3">
+                  <i class="fas fa-heart icon"></i>
+                </button>
+              </div>
+            </div>
             <img
               className="card-img-top"
               src={product.api_featured_image}

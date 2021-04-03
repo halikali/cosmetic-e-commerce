@@ -1,9 +1,13 @@
 .product-section {
   margin-top: 35px;
   .card {
+    box-sizing: border-box;
+    margin-bottom: 100px;
+    border-radius: 1rem;
     img {
-      height: 40%;
+      height: 250px;
       object-fit: contain;
+      margin-bottom: 20px;
     }
     .card-body {
       .link{
@@ -32,61 +36,37 @@
     }
   }
 }
+.hov .row{
 
-
-
-/* Tooltip container */
-.card-img-container {
   position: relative;
-  display: inline-block;
-  border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
+  width: 300px;
+  left: 0px;
 }
 
-/* Tooltip text */
-.card-img-container .add-card {
+.card .hov{
   visibility: hidden;
-  width: 120px;
-  background-color: #555;
-  color: #fff;
+  height: max-content;
   text-align: center;
-  padding: 5px 0;
-  border-radius: 6px;
-
-  /* Position the tooltip text */
   position: absolute;
-  z-index: 1;
-  bottom: 125%;
-  left: 50%;
-  margin-left: -60px;
-
-  /* Fade in tooltip */
-  opacity: 0;
-  transition: opacity 0.3s;
+  top: 200px;
 }
 
-/* Tooltip arrow */
-.card-img-container .add-card::after {
-  content: "";
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  margin-left: -5px;
-  border-width: 5px;
-  border-style: solid;
-  border-color: #555 transparent transparent transparent;
-}
-
-/* Show the tooltip text when you mouse over the tooltip container */
-.card-img-container:hover .add-card {
+.card:hover .hov {
   visibility: visible;
-  opacity: 1;
+  display: flex;
 }
 
-.add-to-card{
-  position: absolute;
-  top: 32%;
-  left: 0;
-  width: 100%;
-  height: 50px;
-  background-color: red;
+.icon{
+  position: relative;
+  z-index: 99;
+  color: black;
+  text-align: center;
+  font-size: 30px;
+}
+
+.btn:hover .icon{
+  color: white;
+}
+.btn{
+  border-radius: 0;
 }
