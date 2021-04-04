@@ -42,20 +42,19 @@ const Filter = () => {
     dispatch(getProductsByBrand(productType, br));
   };
 
-  const togglerHandler = (event) => {
-    console.log(event);
-    document.getElementsByClassName();
+  const togglerHandler = () => {
+    document.getElementById("toggle-filter").classList.toggle("close");
   };
 
   return (
     <div className="container bg-white mt-4">
-      <section className="filter-bar">
-        <button
-          className="close-toggle"
-          onClick={(event) => togglerHandler(event)}
-        >
-          filter{" "}
-        </button>
+      <button
+        className="close-toggler  d-block d-lg-none "
+        onClick={togglerHandler}
+      >
+        FILTER{" "}
+      </button>
+      <section className="filter-bar " id="toggle-filter">
         <h5 className="text-left text-uppercase ">Product Categories</h5>
         <ProductTypes />
         <section className="price mb-4">
