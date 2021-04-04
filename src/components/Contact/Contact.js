@@ -9,9 +9,9 @@ const Contact = () => {
       <div className="container mt-5 contact">
         <div className="row mb-5">
           <div className="col-md-6">
-            <div class="card">
-              <div class="card-body">
-                <h5 class="card-title text-left">İSTANBUL</h5>
+            <div className="card">
+              <div className="card-body">
+                <h5 className="card-title text-left">İSTANBUL</h5>
                 <div className="row">
                   <div className="col-6">
                     <p className="sub-title text-left">PHONES</p>
@@ -19,7 +19,7 @@ const Contact = () => {
                     <p className="text-left">212-371-8500</p>
                   </div>
                   <div className="col-6">
-                    <p class="card-text">
+                    <p className="card-text">
                       <p className="sub-title text-left">ADDRESS</p>
                       <p className="text-left">İstanbul/Turkey</p>
                     </p>
@@ -29,13 +29,13 @@ const Contact = () => {
                     <p className="text-left">istanbul@luchiana.com</p>
                   </div>
                   <div className="col-6">
-                    <p class="card-text">
+                    <p className="card-text">
                       <p className="sub-title text-left">SOCIAL NETWORKS</p>
                       <div className="social-icon">
-                        <i class="fab fa-facebook-f text-left"></i>
-                        <i class="fab fa-instagram text-left"></i>
-                        <i class="fab fa-twitter text-left"></i>
-                        <i class="fab fa-youtube text-left"></i>
+                        <i className="fab fa-facebook-f text-left"></i>
+                        <i className="fab fa-instagram text-left"></i>
+                        <i className="fab fa-twitter text-left"></i>
+                        <i className="fab fa-youtube text-left"></i>
                       </div>
                     </p>
                   </div>
@@ -66,35 +66,38 @@ const Contact = () => {
           <div className="col-md-6 ">
             <h6 className="h5 text-center"> SEND YOUR QUESTION</h6>
             <form className="question">
-              <div class="form-group text-left mb-4">
+              <div className="form-group text-left mb-4">
                 <input
                   type="text"
-                  class="form-control"
+                  className="form-control"
                   id="exampleInputEmail1"
                   aria-describedby="nameHelp"
                   placeholder="Your Name"
                   autoComplete="off"
                 />
               </div>
-              <div class="form-group text-left mb-2">
+              <div className="form-group text-left mb-2">
                 <input
                   type="email"
-                  class="form-control "
+                  className="form-control "
                   id="exampleInputEmail1"
                   aria-describedby="emailHelp"
                   placeholder="Your Email"
                 />
               </div>
-              <div class="form-group mb-5">
+              <div className="form-group mb-5">
                 <label for="exampleFormControlTextarea1"></label>
                 <textarea
-                  class="form-control"
+                  className="form-control"
                   id="exampleFormControlTextarea1"
                   rows="3"
                   placeholder="Your Message"
                 ></textarea>
               </div>
-              <button type="submit" class="btn btn-lg btn-outline-dark mt-5">
+              <button
+                type="submit"
+                className="btn btn-lg btn-outline-dark mt-5"
+              >
                 SEND
               </button>
             </form>
