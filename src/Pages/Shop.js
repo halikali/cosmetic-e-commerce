@@ -9,8 +9,6 @@ const Shop = () => {
 
   return (
     <>
-      {" "}
-      {/* <div style={{ backgroundColor: "red", height: "500px" }}></div> */}
       <TopComponent text="SHOP" />
       <div className="container">
         <div className="row">
