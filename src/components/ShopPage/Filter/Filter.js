@@ -41,10 +41,22 @@ const Filter = () => {
     let br = encodeURI(brand);
     dispatch(getProductsByBrand(productType, br));
   };
+
+  const togglerHandler = (event) => {
+    console.log(event);
+    document.getElementsByClassName();
+  };
+
   return (
     <div className="container bg-white mt-4">
       <section className="filter-bar">
-        <h5 className="text-left text-uppercase">Product Categories</h5>
+        <button
+          className="close-toggle"
+          onClick={(event) => togglerHandler(event)}
+        >
+          filter{" "}
+        </button>
+        <h5 className="text-left text-uppercase ">Product Categories</h5>
         <ProductTypes />
         <section className="price mb-4">
           <h6 className="font-weight-bold mb-3 text-left">Price</h6>
