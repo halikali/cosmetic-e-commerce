@@ -41,13 +41,9 @@ const Filter = () => {
     let br = encodeURI(brand);
     dispatch(getProductsByBrand(productType, br));
   };
-  let tık = 0;
+
   const togglerHandler = () => {
-    tık++;
-    console.log(tık);
-    tık % 2 === 0
-      ? document.getElementById("toggle-filter").classList.add("close")
-      : document.getElementById("toggle-filter").classList.remove("close");
+    document.getElementById("toggle-filter").classList.toggle("close");
   };
 
   return (
