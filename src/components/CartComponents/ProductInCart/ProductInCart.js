@@ -1,55 +1,56 @@
 import React from "react";
 import { useEffect, useState } from "react";
+import { useDispatch } from "react-redux";
 import { useSelector } from "react-redux";
+import { sendSubtotal } from "../../../store/actions/actions";
 
-import TopComponent from "../../TopComponent/TopComponent";
 import "./style.scss";
 const ProductInCart = () => {
   const cartItems = useSelector((state) => state.cartReducer.cartItems);
-  const reduceItems = (Items, type) => {
-    let NewCartItems = Items.reduce((ar, obj) => {
-      let bool = false;
-      if (!ar) {
-        ar = [];
-      }
-      ar.forEach((a) => {
-        if (a.id === obj.id) {
-          type === "inc" && a.count++;
-          type === "dec" && a.count >= 1 && a.count--;
-          bool = true;
-        }
-      });
-      if (!bool) {
-        if (obj.count === undefined) {
-          obj.count = 1;
-        }
-        ar.push(obj);
-      }
-      return ar;
-    }, []);
-    return NewCartItems;
-  };
-  const [reducedCartItems, SetReducedCartItems] = useState(
-    reduceItems(cartItems, "inc")
-  );
-  const [count, setCount] = useState(0);
-  useEffect(() => {
-    console.log(reducedCartItems, "useeffect ici");
-  }, [reducedCartItems, count]);
+  const [newCartItems, setNewCardtItems] = useState(cartItems);
 
-  console.log(cartItems, "shoptan gelen veriler");
+  const reduceItems = (arr) => {
+    let result = [
+      ...arr
+        .reduce((mp, o) => {
+          const key = JSON.stringify([o.price, o.name, o.api_featured_image]);
+          if (!mp.has(key)) mp.set(key, { ...o, count: 0 });
+          mp.get(key).count++;
+          return mp;
+        }, new Map())
+        .values(),
+    ];
+    return result;
+  };
+  const [reducedCartItems, SetReducedCartItems] = useState([]);
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(sendSubtotal(newCartItems.reduce((a, b) => +a + +b.price, 0)));
+    SetReducedCartItems(reduceItems(newCartItems));
+    console.warn(newCartItems);
+    //console.log(newCartItems, "newCartItems");
+    // console.log(reduceItems(newCartItems), "reduceItems(newCartItems)");
+  }, [newCartItems]);
+
+  //  console.log(cartItems, "shoptan gelen veriler");
   //ekleme ve cikartma butonlari yarim kaldi
   const increaseHandler = (item) => {
-    console.log(item, "item");
-    //console.log(reduceItems([...reducedCartItems, item]));
-    //setCount(count + 1);
-    //console.log(reduceItems([...reducedCartItems, item]), "inc");
-    SetReducedCartItems(reduceItems([...reducedCartItems, item], "inc"));
+    let newItem = item;
+    newItem.count = 1;
+    let copyCartItem = newCartItems;
+    SetReducedCartItems(reduceItems(newCartItems));
+    setNewCardtItems([...copyCartItem, newItem]);
   };
   const decreaseHandler = (item) => {
-    //  console.log(reduceItems([...reducedCartItems, item]));
-    // setCount(count + 1);
-    SetReducedCartItems(reduceItems([...reducedCartItems, item], "dec"));
+    let newItem = item;
+    newItem.count = 1;
+    let copyCartItem = newCartItems;
+    let idx = copyCartItem.findIndex((p) => p.id === newItem.id);
+    copyCartItem.splice(idx, 1);
+
+    SetReducedCartItems(reduceItems(newCartItems));
+    setNewCardtItems(copyCartItem);
   };
 
   return (

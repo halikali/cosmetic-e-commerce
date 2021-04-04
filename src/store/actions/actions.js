@@ -46,7 +46,10 @@ export const removeFromCart = (item) => ({
   type: "REMOVE_PRODUCT",
   payload: item,
 });
-
+export const sendSubtotal = (price) => ({
+  type: "SEND",
+  payload: price,
+});
 export const keepProduct = (product) => ({
   type: "KEEP_PRODUCT",
   payload: product,

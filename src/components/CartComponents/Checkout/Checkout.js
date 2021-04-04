@@ -1,14 +1,17 @@
 import React from "react";
-import TopComponent from "../../TopComponent/TopComponent";
+import { useSelector } from "react-redux";
+
 import "./style.scss";
 const Checkout = () => {
+  const subtotal = useSelector((state) => state.subtotalReducer.subtotal);
+  const flatRate = 30;
   return (
     <div>
       <div class="card">
         <div class="card-body ">
           <p class="card-text d-flex justify-content-between">
             <span>subtotal:</span>
-            <span className="fw-bold">$120.00</span>{" "}
+            <span className="fw-bold">${subtotal}</span>{" "}
           </p>
           <div className="card-subtitle text-uppercase mb-3 d-flex justify-content-between">
             shipping
@@ -24,13 +27,13 @@ const Checkout = () => {
                 Flat rate :
               </label>
             </div>
-            <span className="fw-bold"> $30.00</span>
+            <span className="fw-bold"> ${flatRate}</span>
           </div>
           <p className="mb-3 d-flex justify-content-between">
             Shipping to Turkey.
           </p>
           <div className="mb-3 d-flex justify-content-between align-items-center">
-            Total <span className="fw-bold fs-4">$70.00</span>
+            Total <span className="fw-bold fs-4">${flatRate + subtotal}</span>
           </div>
           <button className="btn btn-outline-dark btn-lg text-center p-x-4 checkout">
             {" "}

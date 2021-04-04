@@ -3,6 +3,8 @@ import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import "./style.scss";
 import ReactPaginate from "react-paginate";
+import { useDispatch } from "react-redux";
+import { addToCart } from "../../../store/actions/actions";
 
 const perPage = 12;
 
@@ -22,6 +24,10 @@ const Product = () => {
     setCurrentPage(whichPage);
   }
 
+  const dispatch = useDispatch();
+  const addCartHandler = (product) => {
+    dispatch(addToCart(product));
+  };
   useEffect(() => {
     setWhichPage(0);
   }, [products]);
@@ -33,7 +39,10 @@ const Product = () => {
           <div className="card col-md-4 position-relative">
             <div className="hov">
               <div className="row">
-                <button className="btn btn-lg btn-outline-dark col-9">
+                <button
+                  className="btn btn-lg btn-outline-dark col-9"
+                  onClick={() => addCartHandler(product)}
+                >
                   Add To Card
                 </button>
                 <button className="btn  btn-outline-dark col-3">
@@ -74,7 +83,7 @@ const Product = () => {
                 <span>$</span>{" "}
                 {
                   (product.price =
-                    product.price == 0.0
+                    product.price === 0.0
                       ? `${product.name.length}.0`
                       : `${product.price}`)
                 }
