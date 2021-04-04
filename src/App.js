@@ -11,6 +11,7 @@ import { getProducts } from "./store/actions/actions";
 import Details from "./components/ShopPage/Details/Details";
 import Cart from "./Pages/Cart";
 import Register from "./Pages/Register";
+import Contact from "./components/Contact/Contact";
 
 function App() {
   const dispatch = useDispatch();
@@ -35,6 +36,9 @@ function App() {
 
           <Route path="/cart">
             <Cart />
+          </Route>
+          <Route path="/contact">
+            <Contact />
           </Route>
 
           <Route exact path="/">
