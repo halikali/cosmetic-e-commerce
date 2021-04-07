@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import "./style.scss";
 import ReactPaginate from "react-paginate";
 
@@ -25,7 +25,6 @@ const Product = () => {
   useEffect(() => {
     setWhichPage(0);
   }, [products]);
-
   return (
     <div className="row product-section">
       {currentPageProducts &&
@@ -49,7 +48,12 @@ const Product = () => {
 
             <div className="card-body">
               <Link
-                to={{ pathname: "/details", state: product }}
+                to={{
+                  pathname: `/product/${decodeURIComponent(product.name)}-${
+                    product.id
+                  }`,
+                  state: product,
+                }}
                 className="link"
               >
                 <h5 className="card-title">{product.name}</h5>

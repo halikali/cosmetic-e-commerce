@@ -1,5 +1,10 @@
 import React from "react";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  useParams,
+} from "react-router-dom";
 import Home from "./Pages/Home";
 import "./App.scss";
 import Navbar from "./components/Navbar/Navbar";
@@ -27,7 +32,7 @@ function App() {
           <Route path="/shop">
             <Shop />
           </Route>
-          <Route path="/details">
+          <Route path="/product/:name">
             <Details />
           </Route>
           <Route exact path="/login">
