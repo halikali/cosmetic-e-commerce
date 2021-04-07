@@ -30,7 +30,7 @@ const Product = () => {
     <div className="row product-section">
       {currentPageProducts &&
         currentPageProducts.map((product) => (
-          <div className="card col-md-4 position-relative">
+          <div className="card col-12 col-sm-6 col-lg-4 position-relative">
             <div className="hov">
               <div className="row">
                 <button className="btn btn-lg btn-outline-dark col-9">
