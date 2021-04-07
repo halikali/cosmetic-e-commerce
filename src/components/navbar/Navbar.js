@@ -6,12 +6,13 @@ import Search from "../../assets/header/search.svg";
 import Heart from "../../assets/header/suit-heart.svg";
 import Logout from "../../assets/header/logout.svg";
 import { Link } from "react-router-dom";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { getProducts } from "../../store/actions/actions";
 
 const Navbar = () => {
   const dispatch = useDispatch();
-
+  const wishlist = useSelector((state) => state.wishlistReducer.wishlist);
+  console.log(wishlist);
   const onClickHandler = () => {
     dispatch(getProducts("", ""));
   };
@@ -82,6 +83,23 @@ const Navbar = () => {
           <Link to="/wishlist">
             <img width="28" height="22" src={Heart} alt="hearth" />
           </Link>
+          {wishlist && wishlist.length > 0 && (
+            <div
+              style={{
+                border: "1px solid black",
+                backgroundColor: "whitesmoke",
+                borderRadius: "50%",
+                fontSize: "14px",
+                fontWeight: "700",
+                width: "100%",
+                position: "relative",
+                top: "-30px",
+                left: "13px",
+              }}
+            >
+              {wishlist.length}
+            </div>
+          )}
         </div>
 
         <div className="bagicon">
