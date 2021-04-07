@@ -17,6 +17,7 @@ import Details from "./components/ShopPage/Details/Details";
 import Cart from "./Pages/Cart";
 import Register from "./Pages/Register";
 import Contact from "./components/Contact/Contact";
+import Logout from "./components/Logout/Logout";
 
 function App() {
   const dispatch = useDispatch();
@@ -35,8 +36,11 @@ function App() {
           <Route path="/product/:name">
             <Details />
           </Route>
-          <Route exact path="/login">
+          <Route path="/myaccount">
             <Register />
+          </Route>
+          <Route path="/logout">
+            <Logout />
           </Route>
 
           <Route path="/cart">
