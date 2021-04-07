@@ -4,6 +4,7 @@ import Bag from "../../assets/header/bag-check.svg";
 import Person from "../../assets/header/person.svg";
 import Search from "../../assets/header/search.svg";
 import Heart from "../../assets/header/suit-heart.svg";
+import Logout from "../../assets/header/logout.svg";
 import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { getProducts } from "../../store/actions/actions";
@@ -66,7 +67,7 @@ const Navbar = () => {
         </nav>
 
         <div className="personicon">
-          <a href="/">
+          <a href="/myaccount">
             <img width="28" height="22" src={Person} alt="person" />
           </a>
         </div>
@@ -88,6 +89,12 @@ const Navbar = () => {
             <img width="28" height="22" src={Bag} alt="bag" />
           </Link>
         </div>
+
+        {/* <div className="logouticon">
+          <Link to="/logout">
+            <img width="28" height="22" src={Logout} alt="bag" />
+          </Link>
+        </div> */}
       </div>
     </section>
   );
