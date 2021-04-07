@@ -12,6 +12,7 @@ import { getProducts } from "../../store/actions/actions";
 const Navbar = () => {
   const dispatch = useDispatch();
   const wishlist = useSelector((state) => state.wishlistReducer.wishlist);
+  const cartItems = useSelector((state) => state.cartReducer.cartItems);
   const onClickHandler = () => {
     dispatch(getProducts("", ""));
   };
@@ -91,6 +92,9 @@ const Navbar = () => {
           <Link to="/cart">
             <img width="28" height="22" src={Bag} alt="bag" />
           </Link>
+          {cartItems && cartItems.length > 0 && (
+            <div className="like-count">{cartItems.length}</div>
+          )}
         </div>
 
         {/* <div className="logouticon">

@@ -11,7 +11,7 @@ const perPage = 12;
 const Product = () => {
   const [currentPage, setCurrentPage] = useState([]);
   const [whichPage, setWhichPage] = useState(0);
-
+  const wishlist = useSelector((state) => state.wishlistReducer.wishlist);
   const products = useSelector((state) => state.productsReducer.data);
 
   const offset = currentPage * perPage;
@@ -51,7 +51,14 @@ const Product = () => {
                   onClick={() => addWishlistHandler(product)}
                   className="btn  btn-outline-dark col-3"
                 >
-                  <i class="fas fa-heart icon"></i>
+                  <i
+                    class="fas fa-heart icon"
+                    style={{
+                      color:
+                        wishlist.some((item) => item.id === product.id) &&
+                        "#ce1212",
+                    }}
+                  ></i>
                 </button>
               </div>
             </div>
