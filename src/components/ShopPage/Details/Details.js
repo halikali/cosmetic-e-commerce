@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
 import "./style.scss";
-import { useLocation } from "react-router";
+import { useLocation, useParams } from "react-router";
 import { useDispatch, useSelector } from "react-redux";
 import { addToCart } from "../../../store/actions/actions";
 import TopComponent from "../../TopComponent/TopComponent";
-const Details = () => {
+const Details = (props) => {
   const [productAmount, setProductAmount] = useState(1);
   const items = useSelector((state) => state.cartReducer.cartItems);
   useEffect(() => {
@@ -18,7 +18,6 @@ const Details = () => {
 
   const dispatch = useDispatch();
 
-  console.log(items);
   const cartHandler = (item, amount) => {
     for (let i = 0; i < amount; i++) {
       dispatch(addToCart(item));
@@ -39,18 +38,8 @@ const Details = () => {
   function dangerName() {
     return { __html: detail.name };
   }
-  const hoverHandler = (event) => {
-    // debugger;
-    // console.log(event);
-    // console.log(event.target.children[0].classList.add("hover-p"));
-    // event.target.firstChild.classList.add("hover-p");
-    // console.log(event.target.childNodes[0].classList);
-    // !event.target.childNodes[0].classList.contains("hover-p") &&
-    //   event.target.childNodes[0].classList.add("hover-p");
-  };
-  const downHandler = (event) => {
-    // event.target.firstChild.classList.remove("hover-p");
-  };
+  const hoverHandler = (event) => {};
+  const downHandler = (event) => {};
 
   return (
     <>

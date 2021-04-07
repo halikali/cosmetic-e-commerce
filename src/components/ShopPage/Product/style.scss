@@ -84,11 +84,10 @@
     cursor: default;
   }
 }
-.hov .row{
 
-  position: relative;
-  width: 300px;
-  left: 0px;
+.hov .row{
+  display: flex;
+  margin: auto;
 }
 
 .card .hov{
@@ -97,6 +96,7 @@
   text-align: center;
   position: absolute;
   top: 200px;
+  width: 100%;
 }
 
 .card:hover .hov {
