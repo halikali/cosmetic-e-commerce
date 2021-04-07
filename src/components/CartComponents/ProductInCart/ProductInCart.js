@@ -129,13 +129,6 @@ const ProductInCart = () => {
           </li>
         </ul>
       </div>
-      {/* <>
-        TOTAL:{" "}
-        {reducedCartItems.reduce(
-          (acc, current) => acc + current.count * current.price,
-          0
-        )}
-      </> */}
     </>
   );
 };
