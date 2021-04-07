@@ -1,10 +1,32 @@
+.back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: azure;
+  z-index: 99;
+}
 .login {
+  position: relative;
+  z-index: 100;
   width: 100%;
   min-height: 100vh;
   padding: 0 20px;
   background: #e9e9e9;
   display: flex;
-
+  .icon {
+    color: white;
+  }
+  a {
+    text-decoration: none;
+    color: white;
+    position: relative;
+    z-index: 101;
+    font-size: 30px;
+    top: -100px;
+    left: 0;
+    display: block;
+    width: 50px;
+  }
   * {
     box-sizing: border-box;
     margin: 0;

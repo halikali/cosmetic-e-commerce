@@ -11,23 +11,25 @@ export default function InstagramAndImages() {
   return (
     <>
       <section className="instagram-wrapper d-md-flex justify-content-center margin-t-b d-none ">
-        <div className="item-1">
-          <img src={firstImage} alt="mı o" />
-        </div>
-        <div className="item-2">
-          <img src={secondImage} alt="mı o" />
-        </div>
-        <div className="item-3">
-          <img src={thirdImage} alt="mı o" />
-        </div>
-        <div className="item-4">
-          <img src={forthImage} alt="mı o" />
-        </div>
-        <div className="item-5">
-          <img src={fifthImage} alt="mı o" />
-        </div>
-        <div className="item-6">
-          <img src={sixthImage} alt="mı o" />
+        <div className="wrapper">
+          <div className="item-1">
+            <img src={firstImage} alt="mı o" />
+          </div>
+          <div className="item-2">
+            <img src={secondImage} alt="mı o" />
+          </div>
+          <div className="item-3">
+            <img src={thirdImage} alt="mı o" />
+          </div>
+          <div className="item-4">
+            <img src={forthImage} alt="mı o" />
+          </div>
+          <div className="item-5">
+            <img src={fifthImage} alt="mı o" />
+          </div>
+          <div className="item-6">
+            <img src={sixthImage} alt="mı o" />
+          </div>
         </div>
       </section>
     </>

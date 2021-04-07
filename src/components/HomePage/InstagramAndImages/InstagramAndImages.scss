@@ -20,4 +20,15 @@
   .item-6 {
     transform: translateY(+15%);
   }
+  .item-1 {
+  }
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-shrink: 2;
+  img {
+    width: 100%;
+  }
 }

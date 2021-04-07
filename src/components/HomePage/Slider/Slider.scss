@@ -61,27 +61,28 @@
     background-color: black;
   }
 }
+
 @media only screen and (max-width: 1170px) {
   .slide-wrap {
+    box-sizing: border-box;
+    padding: 0 40px;
     width: 80%;
-    height: 100%;
     top: 20%;
     .text-above {
       font-size: 0.9rem;
       letter-spacing: 1rem;
-      padding-left: 5px;
-      margin-bottom: 5%;
+      margin-bottom: 15px;
     }
     .inner-title {
       font-weight: 300;
       font-size: 2rem;
-      line-height: 0.2;
+      line-height: 2rem;
       letter-spacing: 1rem;
     }
     .description {
       font-weight: 200;
       font-size: 1rem;
-      line-height: 1.4;
+      line-height: 2;
       margin-bottom: 8%;
     }
     .read-more-btn {
@@ -89,6 +90,20 @@
       letter-spacing: 0.2rem;
       text-align: center;
       width: 9rem;
+    }
+  }
+
+  #slider {
+    height: 100vh;
+    #carouselExampleCaptions {
+      height: 100%;
+    }
+    .carousel-item {
+      height: 100%;
+    }
+    img {
+      height: 100vh;
+      object-fit: cover;
     }
   }
 }

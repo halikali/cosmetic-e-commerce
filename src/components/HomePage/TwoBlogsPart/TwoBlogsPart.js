@@ -36,7 +36,7 @@ const TwoBlogsPart = () => {
           </div>
         </div>
         <div className="row mt-5">
-          <div className="col-md-6 blogs-col  ">
+          <div className="col-md-6 blogs-col order-1 order-md-12 ">
             <div class="card blogs-card">
               <div class="card-body">
                 <h5 class="card-subtitle pb-3">ABOUT</h5>
@@ -59,7 +59,7 @@ const TwoBlogsPart = () => {
               </button>
             </div>
           </div>
-          <div className="col-md-6 ">
+          <div className="col-md-6 order-12 order-md-1">
             <img src={BlogTwoBackground} alt="..." class="img-thumbnail" />
           </div>
         </div>
