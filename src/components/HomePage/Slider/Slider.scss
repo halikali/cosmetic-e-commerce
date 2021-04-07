@@ -32,32 +32,63 @@
   display: flex;
   flex-direction: column;
   .text-above {
-    font-size: 1vw;
-    letter-spacing: 1.3vw;
+    font-size: 0.9rem;
+    letter-spacing: 1.3rem;
     padding-left: 5px;
     margin-bottom: 5%;
   }
   .inner-title {
     font-weight: 300;
-    font-size: 4vw;
+    font-size: 2.5rem;
     line-height: 1;
-    letter-spacing: 1.5vw;
+    letter-spacing: 1.3rem;
     margin-bottom: 8%;
   }
   .description {
     font-weight: 200;
-    font-size: 1vw;
+    font-size: 1.5rem;
     line-height: 1.6;
     margin-bottom: 8%;
   }
   .read-more-btn {
-    font-size: 0.7vw;
+    font-size: 0.9rem;
     font-weight: 300;
-    letter-spacing: 0.1vw;
+    letter-spacing: 0.2rem;
     text-align: center;
-    width: 8vw;
+    width: 11rem;
     line-height: 3.5;
     color: white;
     background-color: black;
+  }
+}
+@media only screen and (max-width: 756px) {
+  .slide-wrap {
+    width: 90%;
+    height: 100%;
+    top: 20%;
+    .text-above {
+      font-size: 0.9rem;
+      letter-spacing: 1rem;
+      padding-left: 5px;
+      margin-bottom: 5%;
+    }
+    .inner-title {
+      font-weight: 300;
+      font-size: 2rem;
+      line-height: 0.2;
+      letter-spacing: 1rem;
+    }
+    .description {
+      font-weight: 200;
+      font-size: 1rem;
+      line-height: 1.4;
+      margin-bottom: 8%;
+    }
+    .read-more-btn {
+      font-size: 0.6rem;
+      letter-spacing: 0.2rem;
+      text-align: center;
+      width: 9rem;
+    }
   }
 }
