@@ -12,7 +12,6 @@ import { getProducts } from "../../store/actions/actions";
 const Navbar = () => {
   const dispatch = useDispatch();
   const wishlist = useSelector((state) => state.wishlistReducer.wishlist);
-  console.log(wishlist);
   const onClickHandler = () => {
     dispatch(getProducts("", ""));
   };
@@ -84,21 +83,7 @@ const Navbar = () => {
             <img width="28" height="22" src={Heart} alt="hearth" />
           </Link>
           {wishlist && wishlist.length > 0 && (
-            <div
-              style={{
-                border: "1px solid black",
-                backgroundColor: "whitesmoke",
-                borderRadius: "50%",
-                fontSize: "14px",
-                fontWeight: "700",
-                width: "100%",
-                position: "relative",
-                top: "-30px",
-                left: "13px",
-              }}
-            >
-              {wishlist.length}
-            </div>
+            <div className="like-count">{wishlist.length}</div>
           )}
         </div>
 

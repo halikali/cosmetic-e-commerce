@@ -11,7 +11,7 @@ const Wishlist = () => {
 
   return (
     <>
-      <TopComponent />
+      <TopComponent text="WISHLIST" />
       <div className="row">
         <div className="col-8">
           {wishlist.length > 0 && (

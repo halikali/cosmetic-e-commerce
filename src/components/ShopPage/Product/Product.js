@@ -64,9 +64,7 @@ const Product = () => {
             <div className="card-body">
               <Link
                 to={{
-                  pathname: `/product/${decodeURIComponent(product.name)}-${
-                    product.id
-                  }`,
+                  pathname: `/product/${product.name}-${product.id}`,
                   state: product,
                 }}
                 className="link"

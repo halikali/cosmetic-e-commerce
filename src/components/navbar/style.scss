@@ -142,3 +142,19 @@
   font-family: "Lucida Console", Monaco, monospace;
   letter-spacing: 2px;
 }
+
+.like-count {
+  border: 1px solid rgba(0, 0, 0, 0.651);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: whitesmoke;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  font-size: 14px;
+  font-weight: 700;
+  position: relative;
+  top: -30px;
+  left: 18px;
+}
