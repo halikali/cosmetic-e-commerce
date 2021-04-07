@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import fire from "../components/Login/fire";
 import Login from "../components/Login/Login";
+import Logout from "../components/Logout/Logout";
 
 const Register = () => {
   const [user, setUser] = useState("");
@@ -78,9 +79,7 @@ const Register = () => {
   return (
     <div>
       {user ? (
-        <div>
-          <button onClick={handleLogout}>Logout</button>
-        </div>
+        <Logout onClick={handleLogout} />
       ) : (
         <Login
           email={email}

@@ -1,5 +1,10 @@
 import React from "react";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  useParams,
+} from "react-router-dom";
 import Home from "./Pages/Home";
 import "./App.scss";
 import Navbar from "./components/Navbar/Navbar";
@@ -13,6 +18,8 @@ import Cart from "./Pages/Cart";
 import Register from "./Pages/Register";
 import Contact from "./components/Contact/Contact";
 import Wishlist from "./Pages/Wishlist";
+import Logout from "./components/Logout/Logout";
+
 
 function App() {
   const dispatch = useDispatch();
@@ -28,11 +35,14 @@ function App() {
           <Route path="/shop">
             <Shop />
           </Route>
-          <Route path="/details">
+          <Route path="/product/:name">
             <Details />
           </Route>
-          <Route exact path="/login">
+          <Route path="/myaccount">
             <Register />
+          </Route>
+          <Route path="/logout">
+            <Logout />
           </Route>
 
           <Route path="/cart">
