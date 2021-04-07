@@ -12,6 +12,7 @@ import Details from "./components/ShopPage/Details/Details";
 import Cart from "./Pages/Cart";
 import Register from "./Pages/Register";
 import Contact from "./components/Contact/Contact";
+import Wishlist from "./Pages/Wishlist";
 
 function App() {
   const dispatch = useDispatch();
@@ -40,7 +41,9 @@ function App() {
           <Route path="/contact">
             <Contact />
           </Route>
-
+          <Route path="/wishlist">
+            <Wishlist />
+          </Route>
           <Route exact path="/">
             <Home />
           </Route>

@@ -50,6 +50,15 @@ export const sendSubtotal = (price) => ({
   type: "SEND",
   payload: price,
 });
+export const addWishlist = (product) => ({
+  type: "ADD_WISHLIST",
+  payload: product,
+});
+export const removeWishlist = (product) => ({
+  type: "REMOVE_WISHLIST",
+  payload: product,
+});
+
 export const keepProduct = (product) => ({
   type: "KEEP_PRODUCT",
   payload: product,

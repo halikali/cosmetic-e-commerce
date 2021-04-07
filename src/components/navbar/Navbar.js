@@ -78,9 +78,9 @@ const Navbar = () => {
         </div>
 
         <div className="hearticon">
-          <a href="/">
+          <Link to="/wishlist">
             <img width="28" height="22" src={Heart} alt="hearth" />
-          </a>
+          </Link>
         </div>
 
         <div className="bagicon">

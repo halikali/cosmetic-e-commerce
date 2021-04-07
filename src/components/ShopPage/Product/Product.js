@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import "./style.scss";
 import ReactPaginate from "react-paginate";
 import { useDispatch } from "react-redux";
-import { addToCart } from "../../../store/actions/actions";
+import { addToCart, addWishlist } from "../../../store/actions/actions";
 
 const perPage = 12;
 
@@ -25,6 +25,9 @@ const Product = () => {
   }
 
   const dispatch = useDispatch();
+  const addWishlistHandler = (product) => {
+    dispatch(addWishlist(product));
+  };
   const addCartHandler = (product) => {
     dispatch(addToCart(product));
   };
@@ -45,7 +48,10 @@ const Product = () => {
                 >
                   Add To Card
                 </button>
-                <button className="btn  btn-outline-dark col-3">
+                <button
+                  onClick={() => addWishlistHandler(product)}
+                  className="btn  btn-outline-dark col-3"
+                >
                   <i class="fas fa-heart icon"></i>
                 </button>
               </div>
