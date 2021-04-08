@@ -6,15 +6,40 @@ const cartReducer = (state = initialState, action) => {
     case "ADD_PRODUCT":
       return {
         ...state,
-        cartItems: [...state.cartItems, action.payload],
+        cartItems: state.cartItems.some(
+          (cartItem) => cartItem.id === action.payload.item.id
+        )
+          ? state.cartItems.map((item) =>
+              item.id === action.payload.item.id
+                ? { ...item, count: item.count + action.payload.amount }
+                : item
+            )
+          : [
+              ...state.cartItems,
+              {
+                ...action.payload.item,
+                count: action.payload.amount,
+              },
+            ],
+      };
+      break;
+    case "SUBTRACT_PRODUCT":
+      return {
+        ...state,
+        cartItems: state.cartItems.map((item) =>
+          item.id === action.payload.id
+            ? { ...item, count: item.count !== 0 ? item.count - 1 : 0 }
+            : item
+        ),
       };
       break;
     case "REMOVE_PRODUCT":
       return {
         ...state,
-        ...state.cartItems.filter((cartItem) => cartItem !== action.payload),
+        cartItems: state.cartItems.filter(
+          (cartItem) => cartItem.id !== action.payload.id
+        ),
       };
-      break;
     default:
       return state;
   }

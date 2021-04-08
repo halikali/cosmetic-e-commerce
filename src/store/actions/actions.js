@@ -38,18 +38,19 @@ export const getProductsByBrand = (productType, brand) => {
   };
 };
 
-export const addToCart = (item) => ({
+export const addToCart = (item, amount) => ({
   type: "ADD_PRODUCT",
+  payload: { item: item, amount: amount },
+});
+export const subtractFromCart = (item) => ({
+  type: "SUBTRACT_PRODUCT",
   payload: item,
 });
 export const removeFromCart = (item) => ({
   type: "REMOVE_PRODUCT",
   payload: item,
 });
-export const sendSubtotal = (price) => ({
-  type: "SEND",
-  payload: price,
-});
+
 export const addWishlist = (product) => ({
   type: "ADD_WISHLIST",
   payload: product,

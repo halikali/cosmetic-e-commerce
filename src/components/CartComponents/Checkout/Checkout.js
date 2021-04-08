@@ -3,7 +3,8 @@ import { useSelector } from "react-redux";
 
 import "./style.scss";
 const Checkout = () => {
-  const subtotal = useSelector((state) => state.subtotalReducer.subtotal);
+  const cartItems = useSelector((state) => state.cartReducer.cartItems);
+  const subtotal = cartItems.reduce((a, b) => +a + +b.price * b.count, 0);
   const flatRate = 30;
   return (
     <div>

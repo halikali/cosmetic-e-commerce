@@ -29,7 +29,7 @@ const Product = () => {
     dispatch(addWishlist(product));
   };
   const addCartHandler = (product) => {
-    dispatch(addToCart(product));
+    dispatch(addToCart(product, 1));
   };
   useEffect(() => {
     setWhichPage(0);

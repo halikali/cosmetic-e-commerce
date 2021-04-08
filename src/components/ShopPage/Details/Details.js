@@ -19,9 +19,7 @@ const Details = (props) => {
   const dispatch = useDispatch();
 
   const cartHandler = (item, amount) => {
-    for (let i = 0; i < amount; i++) {
-      dispatch(addToCart(item));
-    }
+    dispatch(addToCart(item, amount));
   };
   const increaseAmount = () => {
     setProductAmount(productAmount + 1);
