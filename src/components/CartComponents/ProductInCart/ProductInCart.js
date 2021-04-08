@@ -1,58 +1,27 @@
 import React from "react";
-import { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 import { useSelector } from "react-redux";
-import { sendSubtotal } from "../../../store/actions/actions";
+import {
+  addToCart,
+  removeFromCart,
+  subtractFromCart,
+} from "../../../store/actions/actions";
 
 import "./style.scss";
 const ProductInCart = () => {
   const cartItems = useSelector((state) => state.cartReducer.cartItems);
-  const [newCartItems, setNewCardtItems] = useState(cartItems);
 
-  const reduceItems = (arr) => {
-    let result = [
-      ...arr
-        .reduce((mp, o) => {
-          const key = JSON.stringify([o.price, o.name, o.api_featured_image]);
-          if (!mp.has(key)) mp.set(key, { ...o, count: 0 });
-          mp.get(key).count++;
-          return mp;
-        }, new Map())
-        .values(),
-    ];
-    return result;
-  };
-  const [reducedCartItems, SetReducedCartItems] = useState([]);
   const dispatch = useDispatch();
 
-  useEffect(() => {
-    dispatch(sendSubtotal(newCartItems.reduce((a, b) => +a + +b.price, 0)));
-    SetReducedCartItems(reduceItems(newCartItems));
-    console.warn(newCartItems);
-    //console.log(newCartItems, "newCartItems");
-    // console.log(reduceItems(newCartItems), "reduceItems(newCartItems)");
-  }, [newCartItems]);
-
-  //  console.log(cartItems, "shoptan gelen veriler");
-  //ekleme ve cikartma butonlari yarim kaldi
-  const increaseHandler = (item) => {
-    let newItem = item;
-    newItem.count = 1;
-    let copyCartItem = newCartItems;
-    SetReducedCartItems(reduceItems(newCartItems));
-    setNewCardtItems([...copyCartItem, newItem]);
+  const increaseHandler = (item, amount) => {
+    dispatch(addToCart(item, amount));
   };
   const decreaseHandler = (item) => {
-    let newItem = item;
-    newItem.count = 1;
-    let copyCartItem = newCartItems;
-    let idx = copyCartItem.findIndex((p) => p.id === newItem.id);
-    copyCartItem.splice(idx, 1);
-
-    SetReducedCartItems(reduceItems(newCartItems));
-    setNewCardtItems(copyCartItem);
+    dispatch(subtractFromCart(item));
   };
-
+  const removeHandler = (item) => {
+    dispatch(removeFromCart(item));
+  };
   return (
     <>
       <div className="row">
@@ -74,18 +43,25 @@ const ProductInCart = () => {
             {cartItems.length <= 0 ? (
               <p>cart is empty</p>
             ) : (
-              reducedCartItems.map((reducedCartItem, i) => (
+              cartItems.map((cartItem, i) => (
                 <div key={i} className="row">
                   <div className="col-3">
                     <img
-                      src={reducedCartItem.api_featured_image}
+                      src={cartItem.api_featured_image}
                       class="rounded float-left"
-                      alt={reducedCartItem.name}
+                      alt={cartItem.name}
                       style={{ width: "100px" }}
                     />
                   </div>
                   <div className="col-5">
-                    <p className="card-text"> {reducedCartItem.name}</p>
+                    <p className="card-text"> {cartItem.name}</p>
+                    <button
+                      class="btn btn-lg btn-outline-dark"
+                      style={{ cursor: "pointer" }}
+                      onClick={() => removeHandler(cartItem)}
+                    >
+                      &#10006;
+                    </button>
                   </div>
                   <div className="col-4">
                     <div className="row">
@@ -93,7 +69,7 @@ const ProductInCart = () => {
                         <button
                           type="button"
                           class="btn btn-sm btn-outline-dark"
-                          onClick={() => decreaseHandler(reducedCartItem)}
+                          onClick={() => decreaseHandler(cartItem)}
                         >
                           -
                         </button>
@@ -101,24 +77,21 @@ const ProductInCart = () => {
                       <div className="col-3">
                         <p className="display-6 text-center">
                           {" "}
-                          {reducedCartItem.count}
+                          {cartItem.count}
                         </p>
                       </div>
                       <div className="col-1">
                         <button
                           type="button"
                           class="btn btn-sm btn-outline-dark"
-                          onClick={() => increaseHandler(reducedCartItem)}
+                          onClick={() => increaseHandler(cartItem, 1)}
                         >
                           +
                         </button>
                       </div>
                       <div className="col-5">
-                        {/* <button type="button" class="btn btn-lg btn-outline-dark">
-                      Add to Cart
-                    </button> */}
                         <p className="card-title h3">
-                          $ {reducedCartItem.price * reducedCartItem.count}
+                          $ {cartItem.price * cartItem.count}
                         </p>
                       </div>
                     </div>
