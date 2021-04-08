@@ -11,11 +11,11 @@ const Checkout = () => {
       <div class="card">
         <div class="card-body ">
           <p class="card-text d-flex justify-content-between">
-            <span>subtotal:</span>
+            <span>Subtotal:</span>
             <span className="fw-bold">${subtotal}</span>{" "}
           </p>
           <div className="card-subtitle text-uppercase mb-3 d-flex justify-content-between">
-            shipping
+            Shipping
           </div>
           <div class="form-check form-switch mb-3 d-flex justify-content-between">
             <div>

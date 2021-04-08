@@ -47,7 +47,7 @@ const Filter = () => {
   };
 
   return (
-    <div className="container bg-white mt-4">
+    <div className="container bg-white mt-4 filterContainer">
       <button
         className="close-toggler  d-block d-lg-none "
         onClick={togglerHandler}

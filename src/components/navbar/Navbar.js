@@ -82,19 +82,21 @@ const Navbar = () => {
         <div className="hearticon">
           <Link to="/wishlist">
             <img width="28" height="22" src={Heart} alt="hearth" />
+            {wishlist && wishlist.length > 0 && (
+              <div className="like-count">{wishlist.length}</div>
+            )}
           </Link>
-          {wishlist && wishlist.length > 0 && (
-            <div className="like-count">{wishlist.length}</div>
-          )}
         </div>
 
         <div className="bagicon">
           <Link to="/cart">
             <img width="28" height="22" src={Bag} alt="bag" />
+            {cartItems && cartItems.length > 0 && (
+              <div className="like-count">
+                {cartItems.reduce((a, b) => +a + +b.count, 0)}
+              </div>
+            )}
           </Link>
-          {cartItems && cartItems.length > 0 && (
-            <div className="like-count">{cartItems.length}</div>
-          )}
         </div>
 
         {/* <div className="logouticon">

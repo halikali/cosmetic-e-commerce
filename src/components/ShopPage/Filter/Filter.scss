@@ -4,25 +4,26 @@
     }
   }
 }
+.filterContainer {
+  margin-top: 5rem;
+}
 
-.close-toggler{
-  padding:  10px;
-  margin-bottom:  20px  !important;
-  margin-top:  20px  !important;
+.close-toggler {
+  padding: 10px;
+  margin-bottom: 20px !important;
+  margin-top: 20px !important;
   margin: auto;
   border: none;
   border-bottom: 2px solid gray;
-
 }
-.close{
+.close {
   display: none;
-  height:0;
-
+  height: 0;
 }
 
 @media only screen and (min-width: 990px) {
   .close {
     display: block;
-    height:100%;
+    height: 100%;
   }
 }

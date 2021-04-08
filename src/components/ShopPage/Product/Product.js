@@ -6,7 +6,7 @@ import ReactPaginate from "react-paginate";
 import { useDispatch } from "react-redux";
 import { addToCart, addWishlist } from "../../../store/actions/actions";
 
-const perPage = 3;
+const perPage = 18;
 
 const Product = () => {
   const [currentPage, setCurrentPage] = useState([]);
@@ -39,7 +39,7 @@ const Product = () => {
     <div className="row product-section">
       {currentPageProducts &&
         currentPageProducts.map((product) => (
-          <div className="card col-12 col-sm-6 col-lg-4 position-relative">
+          <div className="card col-12 col-sm-6  col-lg-4 position-relative">
             <div className="hov">
               <div className="row">
                 <button
@@ -92,6 +92,7 @@ const Product = () => {
                   outline: "none",
                   resize: "none",
                   padding: "6px",
+                  background: "none",
                 }}
               />
 

@@ -1,9 +1,14 @@
 .product-section {
   margin-top: 35px;
+  box-sizing: border-box;
+  padding: 0;
+  /* display: flex; */
+  justify-content: space-around;
   .card {
-    box-sizing: border-box;
     margin-bottom: 100px;
-    border-radius: 1rem;
+    border: 1px solid rgb(204, 203, 203);
+    border-radius: 0;
+
     img {
       height: 250px;
       object-fit: contain;
@@ -80,17 +85,17 @@
   .pagination-link-disabled a {
     color: rgb(198, 197, 202);
     border: 1px solid rgb(198, 197, 202);
-    opacity: .5;
+    opacity: 0.5;
     cursor: default;
   }
 }
 
-.hov .row{
+.hov .row {
   display: flex;
   margin: auto;
 }
 
-.card .hov{
+.card .hov {
   visibility: hidden;
   height: max-content;
   text-align: center;
@@ -104,7 +109,7 @@
   display: flex;
 }
 
-.icon{
+.icon {
   position: relative;
   z-index: 99;
   color: black;
@@ -112,9 +117,9 @@
   font-size: 30px;
 }
 
-.btn:hover .icon{
+.btn:hover .icon {
   color: white;
 }
-.btn{
+.btn {
   border-radius: 0;
 }

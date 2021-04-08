@@ -56,9 +56,12 @@
 
 .hearticon {
   position: fixed;
-
   top: 40px;
   right: 130px;
+  a {
+    text-decoration: none;
+    color: white;
+  }
 }
 .hearticon:hover {
   z-index: 4;
@@ -86,6 +89,10 @@
   position: fixed;
   top: 40px;
   right: 70px;
+  a {
+    text-decoration: none;
+    color: white;
+  }
 }
 .bagicon:hover {
   z-index: 4;
@@ -148,7 +155,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: whitesmoke;
+  background-color: rgba(34, 31, 31, 0.918);
   width: 20px;
   height: 20px;
   border-radius: 50%;
