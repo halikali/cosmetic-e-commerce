@@ -1,16 +1,16 @@
 import React, { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
-import { Link, useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 import "./style.scss";
 import ReactPaginate from "react-paginate";
 import { useDispatch } from "react-redux";
 import { addToCart, addWishlist } from "../../../store/actions/actions";
 
-const perPage = 12;
+const perPage = 3;
 
 const Product = () => {
   const [currentPage, setCurrentPage] = useState([]);
-  const [whichPage, setWhichPage] = useState(0);
+  const [whichPage, setWhichPage] = useState(1);
   const wishlist = useSelector((state) => state.wishlistReducer.wishlist);
   const products = useSelector((state) => state.productsReducer.data);
 
@@ -21,7 +21,7 @@ const Product = () => {
 
   function handlePageClick({ selected: selectedPage }) {
     setWhichPage(() => selectedPage);
-    setCurrentPage(whichPage);
+    setCurrentPage(selectedPage);
   }
 
   const dispatch = useDispatch();
@@ -32,6 +32,7 @@ const Product = () => {
     dispatch(addToCart(product));
   };
   useEffect(() => {
+    setCurrentPage(0);
     setWhichPage(0);
   }, [products]);
   return (
