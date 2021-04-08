@@ -1,0 +1,31 @@
+.container {
+  .row {
+    .accordion {
+      .accordion-item {
+        .accordion-header {
+          button {
+            &:hover {
+            }
+
+            &:not(.collapsed) {
+              color: black;
+              background-color: white;
+              box-shadow: white;
+            }
+
+            &:focus {
+              border-color: white;
+              box-shadow: none;
+            }
+          }
+        }
+
+        .accordion-collapse {
+          .text-color {
+            color: rgb(26, 29, 29);
+          }
+        }
+      }
+    }
+  }
+}

@@ -19,7 +19,8 @@ import Register from "./Pages/Register";
 import Contact from "./components/Contact/Contact";
 import Wishlist from "./Pages/Wishlist";
 import Logout from "./components/Logout/Logout";
-
+import Blog from "./Pages/Blog";
+import Faq from "./Pages/Faq";
 
 function App() {
   const dispatch = useDispatch();
@@ -44,7 +45,12 @@ function App() {
           <Route path="/logout">
             <Logout />
           </Route>
-
+          <Route path="/blog">
+            <Blog />
+          </Route>
+          <Route path="/faq">
+            <Faq />
+          </Route>
           <Route path="/cart">
             <Cart />
           </Route>
