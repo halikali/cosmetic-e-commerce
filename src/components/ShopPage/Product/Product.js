@@ -101,7 +101,7 @@ const Product = () => {
                   (product.price =
                     product.price === 0.0
                       ? `${product.name.length}.0`
-                      : `${product.price}`)
+                      : `${product.price} `)
                 }
               </p>
             </div>
