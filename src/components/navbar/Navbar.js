@@ -50,17 +50,17 @@ const Navbar = () => {
               SHOP
             </span>
           </Link>
-          <Link className="nav-item nav-link active" id="headers" to="/headers">
+          {/* <Link className="nav-item nav-link active" id="headers" to="/headers">
             <span className="a">HEADERS</span>
-          </Link>
+          </Link> */}
           <Link className="nav-item nav-link active" id="blog" to="/blog">
             <span className="a">BLOG</span>
           </Link>
           <Link className="nav-item nav-link active" id="pages" to="/pages">
             <span className="a">PAGES</span>
           </Link>
-          <Link className="nav-item nav-link active" id="mega" to="/mega">
-            <span className="a">MEGA</span>
+          <Link className="nav-item nav-link active" id="mega" to="/faq">
+            <span className="a">FAQ</span>
           </Link>
           <Link className="nav-item nav-link active" id="contact" to="/contact">
             <span className="a">CONTACT</span>
