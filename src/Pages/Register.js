@@ -4,6 +4,9 @@ import Login from "../components/Login/Login";
 import Logout from "../components/Logout/Logout";
 
 const Register = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   const [user, setUser] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");

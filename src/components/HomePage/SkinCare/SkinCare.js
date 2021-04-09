@@ -12,7 +12,7 @@ const SkinCare = () => {
               <div class="row g-0">
                 <div class="col-md-6 ">
                   <div class="card-body">
-                    <h5 class="card-title">
+                    <h5 class="card-title font-marcellus ">
                       best of <br />
                       <span>skıncare</span>
                     </h5>
@@ -40,7 +40,7 @@ const SkinCare = () => {
               <div class="row g-0">
                 <div class="col-md-6">
                   <div class="card-body">
-                    <h5 class="card-title">
+                    <h5 class="card-title font-marcellus">
                       top brand <br />
                       <span>makeup</span>
                     </h5>

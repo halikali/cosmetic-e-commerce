@@ -55,17 +55,23 @@ const Filter = () => {
         FILTER{" "}
       </button>
       <section className="filter-bar " id="toggle-filter">
-        <h5 className="text-left text-uppercase ">Product Categories</h5>
+        <h6 className="text-left text-uppercase fw-bold p-4 ">
+          Product Categories
+        </h6>
         <ProductTypes />
+        <hr />
         <section className="price mb-4">
-          <h6 className="font-weight-bold mb-3 text-left">Price</h6>
+          <h6 className="fw-bold mb-3 text-left p-2">Price</h6>
           <form>
-            <Range min={0} max={100} onChange={onChangeHandler} />
+            <Range min={0} max={80} onChange={onChangeHandler} />
           </form>
-          {firstValue} - {secondValue}
+          {"$"}
+          {firstValue} - {"$"}
+          {secondValue}
         </section>
+        <hr />
         <section className="text-left text-uppercase">
-          <h6>Brands</h6>
+          <h6 className="fw-bold p-2">Brands</h6>
           {brands.length > 1 &&
             brands.map((brand) => (
               <ProductType

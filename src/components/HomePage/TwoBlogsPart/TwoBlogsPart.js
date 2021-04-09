@@ -14,7 +14,9 @@ const TwoBlogsPart = () => {
           <div className="col-md-6 blogs-col">
             <div class="card blogs-card position-relative">
               <div class="card-body">
-                <h5 class="card-subtitle pb-3">NEW COLLECTION</h5>
+                <h5 class="card-subtitle pb-3 font-marcellus">
+                  NEW COLLECTION
+                </h5>
                 <h2 class="card-title pb-3">PINK QUEEN</h2>
                 <p class="card-text">
                   Name were we at hope. Remainder household direction zealously
@@ -39,7 +41,7 @@ const TwoBlogsPart = () => {
           <div className="col-md-6 blogs-col order-1 order-md-12 ">
             <div class="card blogs-card">
               <div class="card-body">
-                <h5 class="card-subtitle pb-3">ABOUT</h5>
+                <h5 class="card-subtitle pb-3 font-marcellus">ABOUT</h5>
                 <h2 class="card-title pb-3">OUR SHOP</h2>
                 <p class="card-text">
                   Name were we at hope. Remainder household direction zealously

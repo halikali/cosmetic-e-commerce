@@ -8,7 +8,7 @@ const News = () => {
       <div className="container">
         <div className="row">
           <div className="col-12">
-            <p className="h5">OUR LATEST</p>
+            <p className="h5 font-marcellus">OUR LATEST</p>
             <br />
             <p className="h2">NEWS</p>
           </div>
@@ -18,7 +18,9 @@ const News = () => {
             <div className="card">
               <img className="card-img-top" src={Face} alt="Face" />
               <div className="card-body">
-                <h5 className="card-title">NEW TRENDS IN 2020 </h5>
+                <h5 className="card-title font-marcellus">
+                  NEW TRENDS IN 2021{" "}
+                </h5>
                 <p className="card-text mt-4">
                   For country now sister engage had seaseon better had
                   waited.Occasional mrs interested far expression.
@@ -36,7 +38,7 @@ const News = () => {
             <div className="card">
               <img className="card-img-top" src={Eyes} alt="Eyes" />
               <div className="card-body">
-                <h5 className="card-title">GALLERY POST </h5>
+                <h5 className="card-title font-marcellus">GALLERY POST </h5>
                 <p className="card-text mt-4">
                   For country now sister engage had seaseon better had
                   waited.Occasional mrs interested far expression.

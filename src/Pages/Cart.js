@@ -1,8 +1,12 @@
+import { useEffect } from "react";
 import Checkout from "../components/CartComponents/Checkout/Checkout";
 import ProductInCart from "../components/CartComponents/ProductInCart/ProductInCart";
 import TopComponent from "../components/TopComponent/TopComponent";
 
 const Cart = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <>
       <TopComponent text="CART" />

@@ -28,3 +28,25 @@
 .img-thumbnail {
   border: none;
 }
+
+@media only screen and (max-width: 1200px) {
+  .two-blogs-part-section {
+    .container {
+      .row {
+        .col-md-6.blogs-col {
+          .card {
+            .blog-button {
+            }
+            .card-body {
+              .card-text {
+                white-space: pre-line;
+                margin-bottom: 100px;
+                padding: 0 15px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

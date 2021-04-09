@@ -8,7 +8,7 @@ const ShipSupportMoney = () => {
         <div className="row">
           <div className="col-lg-4 padding">
             <div className="card">
-              <i class="fas fa-box-open icon"></i>
+              <i class="fas fa-box-open icon pt-3"></i>
               <div className="card-body">
                 <h5 className="card-title">FREE SHIPPING</h5>
                 <p className="card-text px-3 my-3">
@@ -20,7 +20,7 @@ const ShipSupportMoney = () => {
           </div>
           <div className="col-lg-4 padding">
             <div className="card">
-              <i class="far fa-comments icon"></i>
+              <i class="far fa-comments icon pt-3"></i>
               <div className="card-body">
                 <h5 className="card-title">24/7 SUPPORT</h5>
                 <p className="card-text px-3 my-3">
@@ -32,7 +32,7 @@ const ShipSupportMoney = () => {
           </div>
           <div className="col-lg-4 padding">
             <div className="card">
-              <i class="fas fa-undo-alt icon"></i>
+              <i class="fas fa-undo-alt icon pt-3"></i>
               <div className="card-body">
                 <h5 className="card-title">MONEY BACK</h5>
                 <p className="card-text px-3 my-3">

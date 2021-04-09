@@ -19,15 +19,22 @@
   .a {
     color: black;
   }
+  .x {
+    color: rgb(0, 0, 0);
+  }
 }
 .logo {
-  position: fixed;
+  position: absolute;
   left: 45px;
   top: 41px;
 }
-
+#logo {
+  font-size: 28px;
+  letter-spacing: 0.5rem;
+  font-weight: bold;
+}
 .searchicon {
-  position: fixed;
+  position: absolute;
 
   top: 40px;
   right: 250px;
@@ -41,7 +48,7 @@
 }
 
 .personicon {
-  position: fixed;
+  position: absolute;
   top: 40px;
   right: 190px;
 }
@@ -55,7 +62,7 @@
 }
 
 .hearticon {
-  position: fixed;
+  position: absolute;
   top: 40px;
   right: 130px;
   a {
@@ -71,12 +78,6 @@
   transform: scale(1.2);
 }
 
-.logouticon {
-  position: fixed;
-  top: 40px;
-  right: 10px;
-}
-
 .logouticon:hover {
   z-index: 4;
   -webkit-transform: scale(2);
@@ -86,7 +87,7 @@
 }
 
 .bagicon {
-  position: fixed;
+  position: absolute;
   top: 40px;
   right: 70px;
   a {
@@ -108,43 +109,15 @@
   margin: auto auto;
 }
 #home {
-  font-weight: bold;
-  font-family: "Lucida Console", Monaco, monospace;
   letter-spacing: 3px;
 }
 
-#shop {
-  font-weight: bold;
-  font-family: "Lucida Console", Monaco, monospace;
-  letter-spacing: 2px;
-}
-
-#headers {
-  font-weight: bold;
-  font-family: "Lucida Console", Monaco, monospace;
-  letter-spacing: 2px;
-}
-
-#blog {
-  font-weight: bold;
-  font-family: "Lucida Console", Monaco, monospace;
-  letter-spacing: 2px;
-}
-
-#pages {
-  font-weight: bold;
-
-  font-family: "Lucida Console", Monaco, monospace;
-  letter-spacing: 2px;
-}
-
-#mega {
-  font-weight: bold;
-  font-family: "Lucida Console", Monaco, monospace;
-  letter-spacing: 2px;
-}
-
-#contact {
+#home,
+#shop,
+#headers,
+#blog,
+#contact,
+#faq {
   font-weight: bold;
   font-family: "Lucida Console", Monaco, monospace;
   letter-spacing: 2px;
@@ -164,4 +137,60 @@
   position: relative;
   top: -30px;
   left: 18px;
+}
+.d-none-nav {
+  display: none;
+}
+.icon-wrapper {
+  width: 200px;
+}
+.x {
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  position: absolute;
+  top: 45px;
+  font-size: 25px;
+  right: 0;
+  text-align: center;
+  z-index: 99;
+  color: white;
+}
+@media only screen and (max-width: 991px) {
+  nav {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px !important;
+    line-height: 60px;
+  }
+  .icon-wrapper {
+    position: absolute;
+    display: flex;
+    left: 140px;
+    right: 0;
+    margin: 200px auto;
+  }
+  .nav-wrapper {
+    position: relative;
+    top: 100px !important ;
+    background-color: rgba(255, 255, 255, 0.712);
+    float: right;
+    width: 100%;
+    height: 100vh;
+  }
+
+  .header-nav {
+    .a {
+      color: rgb(0, 0, 0);
+    }
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .d-none-nav {
+    display: block;
+  }
 }

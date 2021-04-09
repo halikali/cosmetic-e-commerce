@@ -8,7 +8,7 @@ const NaturalQualityCashback = () => {
         <div className="row">
           <div className="col-lg-4 padding">
             <div className="card">
-              <i class="fas fa-leaf icon"></i>
+              <i class="fas fa-leaf icon pt-3"></i>
               <div className="card-body">
                 <h5 className="card-title">ALL NATURAL</h5>
                 <p className="card-text px-3 my-3">
@@ -20,7 +20,7 @@ const NaturalQualityCashback = () => {
           </div>
           <div className="col-lg-4 padding">
             <div className="card">
-              <i class="fas fa-crown icon"></i>
+              <i class="fas fa-crown icon pt-3"></i>
               <div className="card-body">
                 <h5 className="card-title">TOP QUALITY</h5>
                 <p className="card-text px-3 my-3">
@@ -32,7 +32,7 @@ const NaturalQualityCashback = () => {
           </div>
           <div className="col-lg-4 padding">
             <div className="card">
-              <i class="fas fa-coins icon"></i>
+              <i class="fas fa-coins icon pt-3"></i>
               <div className="card-body">
                 <h5 className="card-title">10% CASHBACK</h5>
                 <p className="card-text px-3 my-3">

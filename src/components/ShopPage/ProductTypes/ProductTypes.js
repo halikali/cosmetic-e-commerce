@@ -21,9 +21,6 @@ export default function ProductTypes() {
 
   return (
     <section className="mb-4 product-type">
-      <h6 className="font-weight-bold mb-3 text-left text-uppercase">
-        Product Types
-      </h6>
       <ProductType productType="blush" onClick={onClickHandler} />
 
       <ProductType productType="eyebrow" onClick={onClickHandler} />

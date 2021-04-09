@@ -36,7 +36,7 @@ const Slider = () => {
           <div className="carousel-item active">
             <img src={Slide1} className="d-block w-100" alt="..." />
             <div className="carousel-caption  slide-wrap">
-              <p className="text-above">NEW BRAND</p>
+              <p className="text-above font-marcellus">NEW BRAND</p>
               <p className="inner-title">JOZY AND MARCO</p>
               <p className="description">
                 Service get met adapted matters offence for. Principles man any
@@ -49,7 +49,7 @@ const Slider = () => {
           <div className="carousel-item">
             <img src={Slide2} className="d-block w-100" alt="..." />
             <div className="carousel-caption  slide-wrap">
-              <p className="text-above">NEW LOOK</p>
+              <p className="text-above font-marcellus">NEW LOOK</p>
               <p className="inner-title">PRINCESS STORY</p>
               <p className="description">
                 Service get met adapted matters offence for. Principles man any
@@ -62,7 +62,7 @@ const Slider = () => {
           <div className="carousel-item">
             <img src={Slide3} className="d-block w-100" alt="..." />
             <div className="carousel-caption  slide-wrap">
-              <p className="text-above">NEW LOOK</p>
+              <p className="text-above font-marcellus">NEW LOOK</p>
               <p className="inner-title">FOREVER BEATIFUL</p>
               <p className="description">
                 Service get met adapted matters offence for. Principles man any

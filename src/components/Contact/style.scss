@@ -1,21 +1,29 @@
-.social-icon{
-    width: 50%;
-    display: flex;
-    justify-content:space-between;
+.social-icon {
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+  .fab {
+    &:hover {
+      cursor: pointer;
+      color: #e4cdd9;
+      transition: all 0.3s ease;
+    }
+  }
 }
-.contact{
-    input,textarea{
-        border: none ;
-        outline: none ;
-        &:focus{
-            border: 1px solid rgba(146, 146, 146, 0.295);
-            box-shadow: none;
-        }
+.contact {
+  input,
+  textarea {
+    border: none;
+    outline: none;
+    &:focus {
+      border: 1px solid rgba(146, 146, 146, 0.295);
+      box-shadow: none;
     }
-    button{
-        width: 100%;
-    }
-    .question{
-        padding: 40px;
-    }
+  }
+  button {
+    width: 100%;
+  }
+  .question {
+    padding: 40px;
+  }
 }

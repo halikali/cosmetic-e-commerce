@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "./Footer.scss";
 
 export default function Footer() {
@@ -8,32 +9,32 @@ export default function Footer() {
           <div className="row text-center d-flex justify-content-center pt-5 margin-0">
             <div className="col-md-1">
               <h6 className="text-uppercase font-weight-bold">
-                <a href="/" className="text-decoration" target="_blank">
-                  About us
-                </a>
+                <Link to="/" className="text-decoration">
+                  About Us
+                </Link>
               </h6>
             </div>
             <div className="col-md-1">
               <h6 className="text-uppercase font-weight-bold">
-                <a href="/" className="text-decoration" target="_blank">
+                <Link to="/" className="text-decoration">
                   Our Team
-                </a>
+                </Link>
               </h6>
             </div>
 
             <div className="col-md-1">
               <h6 className="text-uppercase font-weight-bold">
-                <a href="/" className="text-decoration" target="_blank">
+                <Link to="/faq" className="text-decoration">
                   FAQ
-                </a>
+                </Link>
               </h6>
             </div>
 
             <div className="col-md-1">
               <h6 className="text-uppercase font-weight-bold">
-                <a href="/" className="text-decoration" target="_blank">
+                <Link to="/contact" className="text-decoration">
                   Contact
-                </a>
+                </Link>
               </h6>
             </div>
           </div>
@@ -75,7 +76,7 @@ export default function Footer() {
               <div className="col-md-2 col-lg-2 col-xl-2 mx-auto footer-company-margin">
                 <h4 className="text-uppercase mb-4">
                   <a className="text-company" href="/" target="_blank">
-                    Company
+                    PETRICHOR
                   </a>
                 </h4>
                 <a

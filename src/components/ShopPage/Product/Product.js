@@ -22,6 +22,7 @@ const Product = () => {
   function handlePageClick({ selected: selectedPage }) {
     setWhichPage(() => selectedPage);
     setCurrentPage(selectedPage);
+    window.scrollTo(0, 0);
   }
 
   const dispatch = useDispatch();
@@ -35,6 +36,9 @@ const Product = () => {
     setCurrentPage(0);
     setWhichPage(0);
   }, [products]);
+  function dangerDescription(product) {
+    return { __html: product.description };
+  }
   return (
     <div className="row product-section">
       {currentPageProducts &&
@@ -46,7 +50,7 @@ const Product = () => {
                   className="btn btn-lg btn-outline-dark col-9"
                   onClick={() => addCartHandler(product)}
                 >
-                  Add To Card
+                  Add To Cart
                 </button>
                 <button
                   onClick={() => addWishlistHandler(product)}
@@ -55,6 +59,7 @@ const Product = () => {
                   <i
                     class="fas fa-heart icon"
                     style={{
+                      zIndex: "1",
                       color:
                         wishlist.some((item) => item.id === product.id) &&
                         "#ce1212",
@@ -77,27 +82,24 @@ const Product = () => {
                 }}
                 className="link"
               >
-                <h5 className="card-title">{product.name}</h5>
+                <h5 className="card-title font-marcellus">{product.name}</h5>
               </Link>
-              <textarea
-                id="w3review"
-                name="w3review"
-                maxLength="30"
-                value={product.description && product.description}
-                readOnly
-                rows="2"
+
+              <p
+                dangerouslySetInnerHTML={dangerDescription(product)}
                 style={{
+                  textOverflow: "ellipsis",
                   overflow: "hidden",
-                  border: "none",
-                  outline: "none",
-                  resize: "none",
-                  padding: "6px",
-                  background: "none",
+                  display: "block",
+                  height: "50px",
+                  padding: "5px 5px 0px 5px",
+                  fontWeight: "100",
                 }}
+                className="text-muted card-text text-center"
               />
 
-              <p className="card-text">
-                <span>$</span>{" "}
+              <p className="card-text " style={{ fontWeight: "bold" }}>
+                <span>$</span>
                 {
                   (product.price =
                     product.price === 0.0

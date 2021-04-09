@@ -11,26 +11,28 @@ const Contact = () => {
           <div className="col-md-6">
             <div className="card">
               <div className="card-body">
-                <h5 className="card-title text-left">İSTANBUL</h5>
+                <h5 className="card-title text-left fw-bold">ISTANBUL</h5>
                 <div className="row">
                   <div className="col-6">
-                    <p className="sub-title text-left">PHONES</p>
+                    <p className="sub-title text-left fw-bold">PHONES</p>
                     <p className="text-left">212-371-8555</p>
                     <p className="text-left">212-371-8500</p>
                   </div>
                   <div className="col-6">
                     <p className="card-text">
-                      <p className="sub-title text-left">ADDRESS</p>
-                      <p className="text-left">İstanbul/Turkey</p>
+                      <p className="sub-title text-left fw-bold">ADDRESS</p>
+                      <p className="text-left">Istanbul/Turkey</p>
                     </p>
                   </div>
                   <div className="col-6">
-                    <p className="sub-title text-left">EMAIL</p>
-                    <p className="text-left">istanbul@luchiana.com</p>
+                    <p className="sub-title text-left fw-bold">EMAIL</p>
+                    <p className="text-left">istanbul@petrichor.com</p>
                   </div>
                   <div className="col-6">
                     <p className="card-text">
-                      <p className="sub-title text-left">SOCIAL NETWORKS</p>
+                      <p className="sub-title text-left fw-bold">
+                        SOCIAL NETWORKS
+                      </p>
                       <div className="social-icon">
                         <i className="fab fa-facebook-f text-left"></i>
                         <i className="fab fa-instagram text-left"></i>
@@ -64,7 +66,7 @@ const Contact = () => {
             />
           </div>
           <div className="col-md-6 ">
-            <h6 className="h5 text-center"> SEND YOUR QUESTION</h6>
+            <h6 className="h5 text-center fw-bold"> SEND YOUR QUESTION</h6>
             <form className="question">
               <div className="form-group text-left mb-4">
                 <input
