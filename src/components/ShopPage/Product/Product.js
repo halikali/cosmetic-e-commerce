@@ -7,6 +7,8 @@ import { useDispatch } from "react-redux";
 import { addToCart, addWishlist } from "../../../store/actions/actions";
 
 const perPage = 18;
+const next = <i class="fa fa-angle-double-right"></i>;
+const previous = <i class="fa fa-angle-double-left"></i>;
 
 const Product = () => {
   const [currentPage, setCurrentPage] = useState([]);
@@ -111,8 +113,8 @@ const Product = () => {
           </div>
         ))}{" "}
       <ReactPaginate
-        previousLabel={"← Previous"}
-        nextLabel={"Next →    "}
+        previousLabel={previous}
+        nextLabel={next}
         pageCount={pageCount}
         onPageChange={handlePageClick}
         forcePage={whichPage}

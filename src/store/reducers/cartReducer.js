@@ -22,7 +22,7 @@ const cartReducer = (state = initialState, action) => {
               },
             ],
       };
-      break;
+
     case "SUBTRACT_PRODUCT":
       return {
         ...state,
@@ -32,7 +32,7 @@ const cartReducer = (state = initialState, action) => {
             : item
         ),
       };
-      break;
+
     case "REMOVE_PRODUCT":
       return {
         ...state,
