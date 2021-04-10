@@ -34,7 +34,7 @@ const Navbar = () => {
     <section>
       <div className="header-nav " id="header">
         <div className="logo">
-          <p id="logo">PETRICHOR</p>
+          <p id="logo">PETRICHOR</p>{" "}
         </div>
         <div className="d-lg-none d-block x" onClick={toggler}>
           <i class="fas fa-bars"></i>

@@ -5,7 +5,7 @@ import "./style.scss";
 const Checkout = () => {
   const cartItems = useSelector((state) => state.cartReducer.cartItems);
   const subtotal = cartItems.reduce((a, b) => +a + +b.price * b.count, 0);
-  const flatRate = 30;
+  const flatRate = 0;
   return (
     <div>
       <div class="card">
@@ -28,7 +28,13 @@ const Checkout = () => {
                 Flat rate :
               </label>
             </div>
-            <span className="fw-bold"> ${flatRate}</span>
+            <span
+              className="fw-bold"
+              style={{ textDecoration: "line-through" }}
+            >
+              {" "}
+              $30
+            </span>
           </div>
           <p className="mb-3 d-flex justify-content-between">
             Shipping to Turkey.
